@@ -121,5 +121,29 @@ class FishSpeciesTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 10.0)
     }
+    func testMockAPIWorking() {
+        let expectation = XCTestExpectation.init(description: "Fish Species Mock Service expectation")
+        let fishSpeciesService: FishSpeciesServiceProtocol = MockService()
+        fishSpeciesService.getFishSpecies { success, results, error in
+            if error != nil {
+                XCTFail("Fail")
+            }
+            if success, let fishSpecies = results {
+                if !fishSpecies.isEmpty {
+                    expectation.fulfill()
+                }
+            } else {
+                expectation.fulfill()
+            }
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
     
+    func testJailBrokenHelper() {
+        XCTAssertNotNil(JailBrokenHelper.hasCydiaInstalled())
+        XCTAssertNotNil(JailBrokenHelper.isContainsSuspiciousApps())
+        XCTAssertNotNil(JailBrokenHelper.isSuspiciousSystemPathsExists())
+        XCTAssertNotNil(JailBrokenHelper.canEditSystemFiles())
+    }
+
 }

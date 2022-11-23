@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  FishListViewModel.swift
 //  FishSpecies
 //
 //  Created by MacBook Pro on 22/11/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomeViewModel: NSObject{
+class FishListViewModel: NSObject{
     
     private var fishSpeciesService: FishSpeciesServiceProtocol
     
@@ -15,7 +15,7 @@ class HomeViewModel: NSObject{
     
     private var fishSpecies = Fish()
     
-    private var homeCellViewModels = [HomeCellViewModel]() {
+    private var homeCellViewModels = [FishListCellViewModel]() {
         didSet {
             reloadTableView?()
         }
@@ -38,26 +38,26 @@ class HomeViewModel: NSObject{
     
     func fetchData(fishSpecies: Fish) {
         self.fishSpecies = fishSpecies
-        var vms = [HomeCellViewModel]()
+        var vms = [FishListCellViewModel]()
         for fishSpecie in fishSpecies {
             vms.append(createHomeModel(homeModel: fishSpecie))
         }
         homeCellViewModels = vms
     }
     
-    func createHomeModel(homeModel: FishElement) -> HomeCellViewModel {
+    func createHomeModel(homeModel: FishElement) -> FishListCellViewModel {
         let name = homeModel.speciesName
         let scientificName = homeModel.scientificName
         let imageUrlStr = homeModel.speciesIllustrationPhoto?.src ?? ""
         
-        return HomeCellViewModel(name: name, scientificName: scientificName, imageUrlStr: imageUrlStr)
+        return FishListCellViewModel(name: name, scientificName: scientificName, imageUrlStr: imageUrlStr)
     }
     
     func getNumberofRows() -> Int{
         return homeCellViewModels.count
     }
     
-    func getCellViewModel(at indexPath: IndexPath) -> HomeCellViewModel {
+    func getCellViewModel(at indexPath: IndexPath) -> FishListCellViewModel {
         return homeCellViewModels[indexPath.row]
     }
     

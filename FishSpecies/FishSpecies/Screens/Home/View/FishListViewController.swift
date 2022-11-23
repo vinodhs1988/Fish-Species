@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  FishListViewController.swift
 //  FishSpecies
 //
 //  Created by MacBook Pro on 22/11/22.
@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UIViewController{
+class FishListViewController: UIViewController{
     
     @IBOutlet var tableView: UITableView!
     
     lazy var viewModel = {
-        HomeViewModel()
+        FishListViewModel()
     }()
     
     private var activityIndicatorView: ActivityIndicatorView!
@@ -22,15 +22,7 @@ class HomeViewController: UIViewController{
         super.viewDidLoad()
         initView()
         
-        let jailbrokenLabelText = "Is JailBroken - \(UIDevice.current.isJailBroken)"
-        print(jailbrokenLabelText)
-        if UIDevice.current.isJailBroken {
-            let alert = UIAlertController(title: "System Requirements", message: "Sorry, your iOS seems to be modified. This app is only supported on unmodified versions of iOS.", preferredStyle: UIAlertController.Style.alert)
-            self.present(alert, animated: true, completion: nil)
-        } else{
-            initViewModel()
-        }
-
+        initViewModel()
     }
     
     private func initView() {
@@ -40,7 +32,7 @@ class HomeViewController: UIViewController{
         tableView.separatorStyle = .singleLine
         tableView.tableFooterView = UIView()
         
-        tableView.register(HomeCell.nib, forCellReuseIdentifier: HomeCell.identifier)
+        tableView.register(FishListCell.nib, forCellReuseIdentifier: FishListCell.identifier)
         
         navigationController?.hidesBarsOnSwipe = false
         
@@ -62,14 +54,14 @@ class HomeViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier ==  AppConstants.DetailPageSegueIdentifier{
-            let destVC = segue.destination as? DetailViewController
+            let destVC = segue.destination as? FishDetailViewController
             let fishSpeciesDetail = viewModel.getFishSpecies(at: self.tableView.indexPathForSelectedRow ?? IndexPath(row: 0, section: 0))
             destVC?.viewModel.fishSpeciesDetail = fishSpeciesDetail
         }
     }
 }
 
-extension HomeViewController: UITableViewDelegate {
+extension FishListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: AppConstants.DetailPageSegueIdentifier, sender: self)
@@ -80,13 +72,13 @@ extension HomeViewController: UITableViewDelegate {
     }
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension FishListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.getNumberofRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeCell.identifier, for: indexPath) as? HomeCell else { fatalError("xib does not exists") }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FishListCell.identifier, for: indexPath) as? FishListCell else { fatalError("xib does not exists") }
         let cellVM = viewModel.getCellViewModel(at: indexPath)
         cell.cellViewModel = cellVM
         return cell

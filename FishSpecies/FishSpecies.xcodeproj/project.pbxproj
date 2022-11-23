@@ -18,15 +18,15 @@
 		18FEC4E7292C8A5A0074B5F0 /* FishSpeciesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4E6292C8A5A0074B5F0 /* FishSpeciesUITestsLaunchTests.swift */; };
 		18FEC4F5292C9A9C0074B5F0 /* HttpRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4F4292C9A9C0074B5F0 /* HttpRequestHelper.swift */; };
 		18FEC4F8292C9AE30074B5F0 /* FishesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4F7292C9AE30074B5F0 /* FishesService.swift */; };
-		18FEC4FE292C9B690074B5F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4FD292C9B690074B5F0 /* HomeViewController.swift */; };
-		18FEC500292C9B790074B5F0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4FF292C9B790074B5F0 /* DetailViewController.swift */; };
+		18FEC4FE292C9B690074B5F0 /* FishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4FD292C9B690074B5F0 /* FishListViewController.swift */; };
+		18FEC500292C9B790074B5F0 /* FishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4FF292C9B790074B5F0 /* FishDetailViewController.swift */; };
 		18FEC502292C9B910074B5F0 /* Fishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC501292C9B910074B5F0 /* Fishes.swift */; };
-		18FEC504292C9BB40074B5F0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC503292C9BB40074B5F0 /* HomeViewModel.swift */; };
+		18FEC504292C9BB40074B5F0 /* FishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC503292C9BB40074B5F0 /* FishListViewModel.swift */; };
 		18FEC506292C9DCB0074B5F0 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC505292C9DCB0074B5F0 /* AppConstants.swift */; };
-		18FEC50E292CB3B90074B5F0 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC50C292CB3B90074B5F0 /* HomeCell.swift */; };
-		18FEC50F292CB3B90074B5F0 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC50D292CB3B90074B5F0 /* HomeCell.xib */; };
-		18FEC513292D0B7F0074B5F0 /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC512292D0B7F0074B5F0 /* HomeCellViewModel.swift */; };
-		18FEC516292D0E630074B5F0 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC515292D0E630074B5F0 /* DetailViewModel.swift */; };
+		18FEC50E292CB3B90074B5F0 /* FishListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC50C292CB3B90074B5F0 /* FishListCell.swift */; };
+		18FEC50F292CB3B90074B5F0 /* FishListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC50D292CB3B90074B5F0 /* FishListCell.xib */; };
+		18FEC513292D0B7F0074B5F0 /* FishListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC512292D0B7F0074B5F0 /* FishListCellViewModel.swift */; };
+		18FEC516292D0E630074B5F0 /* FishDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC515292D0E630074B5F0 /* FishDetailViewModel.swift */; };
 		18FEC51D292D37450074B5F0 /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC51C292D37450074B5F0 /* CommonExtensions.swift */; };
 		18FEC51F292DD59D0074B5F0 /* MockServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC51E292DD59D0074B5F0 /* MockServiceTests.swift */; };
 		18FEC521292DD76E0074B5F0 /* UnitTestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC520292DD76E0074B5F0 /* UnitTestData.json */; };
@@ -66,15 +66,15 @@
 		18FEC4E6292C8A5A0074B5F0 /* FishSpeciesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishSpeciesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		18FEC4F4292C9A9C0074B5F0 /* HttpRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestHelper.swift; sourceTree = "<group>"; };
 		18FEC4F7292C9AE30074B5F0 /* FishesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishesService.swift; sourceTree = "<group>"; };
-		18FEC4FD292C9B690074B5F0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		18FEC4FF292C9B790074B5F0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		18FEC4FD292C9B690074B5F0 /* FishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishListViewController.swift; sourceTree = "<group>"; };
+		18FEC4FF292C9B790074B5F0 /* FishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishDetailViewController.swift; sourceTree = "<group>"; };
 		18FEC501292C9B910074B5F0 /* Fishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fishes.swift; sourceTree = "<group>"; };
-		18FEC503292C9BB40074B5F0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		18FEC503292C9BB40074B5F0 /* FishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishListViewModel.swift; sourceTree = "<group>"; };
 		18FEC505292C9DCB0074B5F0 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		18FEC50C292CB3B90074B5F0 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
-		18FEC50D292CB3B90074B5F0 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
-		18FEC512292D0B7F0074B5F0 /* HomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
-		18FEC515292D0E630074B5F0 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		18FEC50C292CB3B90074B5F0 /* FishListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishListCell.swift; sourceTree = "<group>"; };
+		18FEC50D292CB3B90074B5F0 /* FishListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FishListCell.xib; sourceTree = "<group>"; };
+		18FEC512292D0B7F0074B5F0 /* FishListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishListCellViewModel.swift; sourceTree = "<group>"; };
+		18FEC515292D0E630074B5F0 /* FishDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishDetailViewModel.swift; sourceTree = "<group>"; };
 		18FEC51C292D37450074B5F0 /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		18FEC51E292DD59D0074B5F0 /* MockServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceTests.swift; sourceTree = "<group>"; };
 		18FEC520292DD76E0074B5F0 /* UnitTestData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UnitTestData.json; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				18FEC50B292CB39A0074B5F0 /* Cell */,
-				18FEC4FD292C9B690074B5F0 /* HomeViewController.swift */,
+				18FEC4FD292C9B690074B5F0 /* FishListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,8 +210,8 @@
 		18FEC4FC292C9B3A0074B5F0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				18FEC503292C9BB40074B5F0 /* HomeViewModel.swift */,
-				18FEC512292D0B7F0074B5F0 /* HomeCellViewModel.swift */,
+				18FEC503292C9BB40074B5F0 /* FishListViewModel.swift */,
+				18FEC512292D0B7F0074B5F0 /* FishListCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 		18FEC50A292CB0830074B5F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				18FEC4FF292C9B790074B5F0 /* DetailViewController.swift */,
+				18FEC4FF292C9B790074B5F0 /* FishDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,8 +246,8 @@
 		18FEC50B292CB39A0074B5F0 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				18FEC50C292CB3B90074B5F0 /* HomeCell.swift */,
-				18FEC50D292CB3B90074B5F0 /* HomeCell.xib */,
+				18FEC50C292CB3B90074B5F0 /* FishListCell.swift */,
+				18FEC50D292CB3B90074B5F0 /* FishListCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 		18FEC514292D0E2D0074B5F0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				18FEC515292D0E630074B5F0 /* DetailViewModel.swift */,
+				18FEC515292D0E630074B5F0 /* FishDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 			files = (
 				18FEC4D0292C8A5A0074B5F0 /* LaunchScreen.storyboard in Resources */,
 				18FEC4CD292C8A5A0074B5F0 /* Assets.xcassets in Resources */,
-				18FEC50F292CB3B90074B5F0 /* HomeCell.xib in Resources */,
+				18FEC50F292CB3B90074B5F0 /* FishListCell.xib in Resources */,
 				18FEC4CB292C8A570074B5F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,17 +397,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FEC513292D0B7F0074B5F0 /* HomeCellViewModel.swift in Sources */,
+				18FEC513292D0B7F0074B5F0 /* FishListCellViewModel.swift in Sources */,
 				184FD396292E4B8800ADE941 /* ImageDownloader.swift in Sources */,
-				18FEC4FE292C9B690074B5F0 /* HomeViewController.swift in Sources */,
+				18FEC4FE292C9B690074B5F0 /* FishListViewController.swift in Sources */,
 				18FEC506292C9DCB0074B5F0 /* AppConstants.swift in Sources */,
 				18FEC4C4292C8A570074B5F0 /* AppDelegate.swift in Sources */,
 				18FEC4F8292C9AE30074B5F0 /* FishesService.swift in Sources */,
-				18FEC50E292CB3B90074B5F0 /* HomeCell.swift in Sources */,
-				18FEC504292C9BB40074B5F0 /* HomeViewModel.swift in Sources */,
+				18FEC50E292CB3B90074B5F0 /* FishListCell.swift in Sources */,
+				18FEC504292C9BB40074B5F0 /* FishListViewModel.swift in Sources */,
 				18FEC502292C9B910074B5F0 /* Fishes.swift in Sources */,
-				18FEC500292C9B790074B5F0 /* DetailViewController.swift in Sources */,
-				18FEC516292D0E630074B5F0 /* DetailViewModel.swift in Sources */,
+				18FEC500292C9B790074B5F0 /* FishDetailViewController.swift in Sources */,
+				18FEC516292D0E630074B5F0 /* FishDetailViewModel.swift in Sources */,
 				18FEC4F5292C9A9C0074B5F0 /* HttpRequestHelper.swift in Sources */,
 				18FEC51D292D37450074B5F0 /* CommonExtensions.swift in Sources */,
 				18FEC4C6292C8A570074B5F0 /* SceneDelegate.swift in Sources */,

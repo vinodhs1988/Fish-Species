@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeCell: UITableViewCell {
+class FishListCell: UITableViewCell {
 
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var scientificNameLabel: UILabel!
@@ -16,14 +16,11 @@ class HomeCell: UITableViewCell {
     static var identifier: String { return String(describing: self) }
     static var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
 
-    var cellViewModel: HomeCellViewModel? {
+    var cellViewModel: FishListCellViewModel? {
         didSet {
             nameLabel.text = cellViewModel?.name
             scientificNameLabel.text = cellViewModel?.scientificName
             if let imageUrlStr = cellViewModel?.imageUrlStr{
-//                ImageDownloader.shared.downloadImage(with: imageUrlStr, completionHandler: { downloadedimage, isDownloaded in
-//                        self.fishImageView.image = downloadedimage
-//                }, placeholderImage: AppConstants.placeholderImg)
                 self.fishImageView.loadImageUsingCache(withUrl: imageUrlStr)
             }
         }

@@ -10,11 +10,11 @@ import XCTest
 
 class FishSpeciesTests: XCTestCase {
     
-    var viewModel = HomeViewModel(fishSpeciesService: MockService())
-    let detailViewModel = DetailViewModel()
+    var viewModel = FishListViewModel(fishSpeciesService: MockService())
+    let detailViewModel = FishDetailViewModel()
     
-    var vc: HomeViewController!
-    var detailvc: DetailViewController!
+    var vc: FishListViewController!
+    var detailvc: FishDetailViewController!
 
     override func setUp() {
         super.setUp()
@@ -22,18 +22,18 @@ class FishSpeciesTests: XCTestCase {
         detailvc = makeDetailPageSUT()
     }
     
-    func makeSUT() -> HomeViewController {
+    func makeSUT() -> FishListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+        let sut = storyboard.instantiateViewController(identifier: "FishListViewController") as! FishListViewController
         sut.viewModel = viewModel
         sut.loadViewIfNeeded()
         sut.viewDidLoad()
         return sut
     }
     
-    func makeDetailPageSUT() -> DetailViewController {
+    func makeDetailPageSUT() -> FishDetailViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        let sut = storyboard.instantiateViewController(identifier: "FishDetailViewController") as! FishDetailViewController
         sut.viewModel = detailViewModel
         sut.loadViewIfNeeded()
         sut.viewDidLoad()
@@ -55,8 +55,8 @@ class FishSpeciesTests: XCTestCase {
     
     
     func testTableViewHasCells() {
-        let cell = vc.tableView.dequeueReusableCell(withIdentifier: HomeCell.identifier)
-        XCTAssertNotNil(cell, "TableView should be able to dequeue cell with identifier: '\(HomeCell.identifier)'")
+        let cell = vc.tableView.dequeueReusableCell(withIdentifier: FishListCell.identifier)
+        XCTAssertNotNil(cell, "TableView should be able to dequeue cell with identifier: '\(FishListCell.identifier)'")
     }
     
     func testHasATableView() {
@@ -85,20 +85,20 @@ class FishSpeciesTests: XCTestCase {
     }
 
     func testTableViewCellHasReuseIdentifier() {
-        let cell = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? HomeCell
+        let cell = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? FishListCell
         let actualReuseIdentifer = cell?.reuseIdentifier
-        let expectedReuseIdentifier = HomeCell.identifier
+        let expectedReuseIdentifier = FishListCell.identifier
         XCTAssertEqual(actualReuseIdentifer, expectedReuseIdentifier)
     }
 
     func testTableCellHasCorrectLabelText() {
-        let cell0 = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? HomeCell
+        let cell0 = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? FishListCell
         XCTAssertEqual(cell0?.scientificNameLabel.text, vc.viewModel.getFishSpecies(at: IndexPath(row: 0, section: 0)).scientificName)
         
-        let cell1 = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 1, section: 0)) as? HomeCell
+        let cell1 = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 1, section: 0)) as? FishListCell
         XCTAssertEqual(cell1?.scientificNameLabel.text, vc.viewModel.getCellViewModel(at: IndexPath(row: 1, section: 0)).scientificName)
 
-        let cell2 = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 2, section: 0)) as? HomeCell
+        let cell2 = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 2, section: 0)) as? FishListCell
         XCTAssertEqual(cell2?.scientificNameLabel.text, vc.viewModel.getCellViewModel(at: IndexPath(row: 2, section: 0)).scientificName)
     }
 
@@ -110,5 +110,9 @@ class FishSpeciesTests: XCTestCase {
         let fishSpeciesDetail = vc.viewModel.getFishSpecies(at: IndexPath(row: 0, section: 0))
         detailvc.viewModel.fishSpeciesDetail = fishSpeciesDetail
         XCTAssertEqual(detailvc.viewModel.detailPageViewModel?.imageUrlStr, fishSpeciesDetail.speciesIllustrationPhoto?.src)
+    }
+    
+    func testDeviceIsJailBroken(){
+        
     }
 }

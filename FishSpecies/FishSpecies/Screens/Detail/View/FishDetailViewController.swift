@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  FishDetailViewController.swift
 //  FishSpecies
 //
 //  Created by MacBook Pro on 22/11/22.
@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 
-class DetailViewController: UIViewController{
+class FishDetailViewController: UIViewController{
 
     lazy var viewModel = {
-        DetailViewModel()
+        FishDetailViewModel()
     }()
 
     @IBOutlet private var fishDetailTextView: UITextView!

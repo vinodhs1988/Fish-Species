@@ -1,5 +1,5 @@
 //
-//  DetailViewModel.swift
+//  FishDetailViewModel.swift
 //  FishSpecies
 //
 //  Created by MacBook Pro on 22/11/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DetailViewModel: NSObject{
+class FishDetailViewModel: NSObject{
     
     var updateDataSource: (() -> Void)?
     

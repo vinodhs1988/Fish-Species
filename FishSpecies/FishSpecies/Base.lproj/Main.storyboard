@@ -12,7 +12,7 @@
         <!--Fish Species-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="FishSpecies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FishListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FishListViewController" customModule="FishSpecies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="1031.8840579710145" y="108.48214285714285"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Fish Detail View Controller-->
         <scene sceneID="V84-wc-Veq">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LEp-cp-rmh" customClass="DetailViewController" customModule="FishSpecies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FishDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LEp-cp-rmh" customClass="FishDetailViewController" customModule="FishSpecies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cjO-Rv-Qev">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FishListViewModel: NSObject{
+class FishListViewModel: NSObject {
     
     private var fishSpeciesService: FishSpeciesServiceProtocol
     
@@ -20,7 +20,6 @@ class FishListViewModel: NSObject{
             reloadTableView?()
         }
     }
-    
     
     init(fishSpeciesService: FishSpeciesServiceProtocol = FishService()) {
         self.fishSpeciesService = fishSpeciesService
@@ -53,7 +52,7 @@ class FishListViewModel: NSObject{
         return FishListCellViewModel(name: name, scientificName: scientificName, imageUrlStr: imageUrlStr)
     }
     
-    func getNumberofRows() -> Int{
+    func getNumberofRows() -> Int {
         return homeCellViewModels.count
     }
     

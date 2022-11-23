@@ -7,10 +7,8 @@
 
 import UIKit
 
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -20,15 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = storyboard.instantiateViewController(withIdentifier: "FishListHome") as? UINavigationController
         window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
-        let jailbrokenLabelText = "Is JailBroken - \(UIDevice.current.isJailBroken)"
+        let jailbrokenLabelText = "Is JailBroken - \(UIDevice.current.isJailBroken())"
         print(jailbrokenLabelText)
-        if UIDevice.current.isJailBroken {
-            let alert = UIAlertController(title: "System Requirements", message: "Sorry, your iOS seems to be modified. This app is only supported on unmodified versions of iOS.", preferredStyle: UIAlertController.Style.alert)
+        if UIDevice.current.isJailBroken() {
+            let alertStyle = UIAlertController.Style.alert
+            let alertTitle = "System Requirements"
+            let alert = UIAlertController(title: alertTitle, message: AppConstants.JailBrokenDeviceAlertMessage, preferredStyle: alertStyle)
             navigationController?.present(alert, animated: true, completion: nil)
         }
 
         return true
     }
-    
 }
-

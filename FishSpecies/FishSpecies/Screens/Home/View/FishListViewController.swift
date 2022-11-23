@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class FishListViewController: UIViewController{
+class FishListViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
@@ -17,7 +17,7 @@ class FishListViewController: UIViewController{
     }()
     
     private var activityIndicatorView: ActivityIndicatorView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -53,7 +53,7 @@ class FishListViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier ==  AppConstants.DetailPageSegueIdentifier{
+        if segue.identifier ==  AppConstants.DetailPageSegueIdentifier {
             let destVC = segue.destination as? FishDetailViewController
             let fishSpeciesDetail = viewModel.getFishSpecies(at: self.tableView.indexPathForSelectedRow ?? IndexPath(row: 0, section: 0))
             destVC?.viewModel.fishSpeciesDetail = fishSpeciesDetail
@@ -78,9 +78,11 @@ extension FishListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FishListCell.identifier, for: indexPath) as? FishListCell else { fatalError("xib does not exists") }
-        let cellVM = viewModel.getCellViewModel(at: indexPath)
-        cell.cellViewModel = cellVM
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: FishListCell.identifier, for: indexPath) as? FishListCell {
+            let cellVM = viewModel.getCellViewModel(at: indexPath)
+            cell.cellViewModel = cellVM
+            return cell
+        }
+        return UITableViewCell()
     }
 }

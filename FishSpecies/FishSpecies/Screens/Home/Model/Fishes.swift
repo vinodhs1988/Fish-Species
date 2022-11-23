@@ -128,10 +128,8 @@ extension ImageGallery {
     }
 }
 
-
 // MARK: - SpeciesIllustrationPhoto
 struct SpeciesIllustrationPhoto: Decodable {
     let src: String?
     let alt, title: String?
 }
-

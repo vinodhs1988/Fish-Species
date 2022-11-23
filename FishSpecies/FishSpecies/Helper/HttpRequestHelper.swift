@@ -8,13 +8,13 @@
 import Foundation
 
 enum HTTPHeaderFields {
-    case application_json
-    case application_x_www_form_urlencoded
+    case applicationJson
+    case applicationXWWWFormUrlencoded
     case none
 }
 
 class HttpRequestHelper {
-    func GET(url: String, params: [String: String], httpHeader: HTTPHeaderFields, complete: @escaping (Bool, Data?) -> ()) {
+    func GET(url: String, params: [String: String], httpHeader: HTTPHeaderFields, complete: @escaping (Bool, Data?) -> Void) {
         guard var components = URLComponents(string: url) else {
             print("Error: cannot create URLCompontents")
             return
@@ -31,15 +31,13 @@ class HttpRequestHelper {
         request.httpMethod = "GET"
 
         switch httpHeader {
-        case .application_json:
+        case .applicationJson:
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        case .application_x_www_form_urlencoded:
+        case .applicationXWWWFormUrlencoded:
             request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         case .none: break
         }
 
-        
-        // .ephemeral prevent JSON from caching (They'll store in Ram and nothing on Disk)
         let config = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: config)
         session.dataTask(with: request) { data, response, error in

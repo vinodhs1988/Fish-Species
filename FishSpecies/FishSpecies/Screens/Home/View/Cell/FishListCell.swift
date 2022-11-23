@@ -20,7 +20,7 @@ class FishListCell: UITableViewCell {
         didSet {
             nameLabel.text = cellViewModel?.name
             scientificNameLabel.text = cellViewModel?.scientificName
-            if let imageUrlStr = cellViewModel?.imageUrlStr{
+            if let imageUrlStr = cellViewModel?.imageUrlStr {
                 self.fishImageView.loadImageUsingCache(withUrl: imageUrlStr)
             }
         }
@@ -28,7 +28,6 @@ class FishListCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         initView()
     }
 

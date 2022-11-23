@@ -12,7 +12,8 @@ extension String {
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return nil }
         do {
-            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html,
+                                                                .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
         } catch {
             return nil
         }
@@ -27,36 +28,30 @@ extension UIDevice {
         return TARGET_OS_SIMULATOR != 0
     }
     
-    var isJailBroken: Bool {
-        get {
-            if UIDevice.current.isSimulator { return false }
-            if JailBrokenHelper.hasCydiaInstalled() { return true }
-            if JailBrokenHelper.isContainsSuspiciousApps() { return true }
-            if JailBrokenHelper.isSuspiciousSystemPathsExists() { return true }
-            return JailBrokenHelper.canEditSystemFiles()
-        }
+    func isJailBroken() -> Bool{
+        if UIDevice.current.isSimulator { return false }
+        if JailBrokenHelper.hasCydiaInstalled() { return true }
+        if JailBrokenHelper.isContainsSuspiciousApps() { return true }
+        if JailBrokenHelper.isSuspiciousSystemPathsExists() { return true }
+        return JailBrokenHelper.canEditSystemFiles()
     }
 }
-    
+
 private struct JailBrokenHelper {
     static func hasCydiaInstalled() -> Bool {
         return UIApplication.shared.canOpenURL(URL(string: "cydia://")!)
     }
     
     static func isContainsSuspiciousApps() -> Bool {
-        for path in suspiciousAppsPathToCheck {
-            if FileManager.default.fileExists(atPath: path) {
-                return true
-            }
+        for path in suspiciousAppsPathToCheck where FileManager.default.fileExists(atPath: path) {
+            return true
         }
         return false
     }
     
     static func isSuspiciousSystemPathsExists() -> Bool {
-        for path in suspiciousSystemPathsToCheck {
-            if FileManager.default.fileExists(atPath: path) {
-                return true
-            }
+        for path in suspiciousSystemPathsToCheck where FileManager.default.fileExists(atPath: path) {
+            return true
         }
         return false
     }
@@ -107,4 +102,3 @@ private struct JailBrokenHelper {
         ]
     }
 }
-

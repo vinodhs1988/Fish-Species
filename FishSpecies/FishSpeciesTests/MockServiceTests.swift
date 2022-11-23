@@ -10,7 +10,7 @@ import XCTest
 
 class MockService: FishSpeciesServiceProtocol {
     
-    func getFishSpecies(completion: @escaping (Bool, Fish?, String?) -> ()) {
+    func getFishSpecies(completion: @escaping (Bool, Fish?, String?) -> Void) {
         guard let pathString = Bundle(for: type(of: self)).path(forResource: "UnitTestData", ofType: "json") else {
             fatalError("UnitTestData.json not found")
         }
@@ -23,12 +23,10 @@ class MockService: FishSpeciesServiceProtocol {
             fatalError("Unable to convert UnitTestData.json to Data")
         }
         
-        
         do {
             let model = try JSONDecoder().decode(Fish.self, from: jsonData)
             completion(true, model, nil)
-        }
-        catch {
+        } catch {
             completion(false, nil, "Error: Trying to parse Fishes to model")
         }
     }

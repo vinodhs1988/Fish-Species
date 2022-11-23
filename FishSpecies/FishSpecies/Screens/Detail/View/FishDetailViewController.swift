@@ -8,8 +8,7 @@
 import Foundation
 import UIKit
 
-
-class FishDetailViewController: UIViewController{
+class FishDetailViewController: UIViewController {
 
     lazy var viewModel = {
         FishDetailViewModel()
@@ -28,10 +27,7 @@ class FishDetailViewController: UIViewController{
         fishImageView.layer.cornerRadius = 20.0
         fishImageView.backgroundColor = UIColor.white
 
-        if let imageUrlStr = self.viewModel.detailPageViewModel?.imageUrlStr, !imageUrlStr.isEmpty{
-//            ImageDownloader.shared.downloadImage(with: imageUrlStr, completionHandler: { downloadedimage, isDownloaded in
-//                self.fishImageView.image = downloadedimage
-//            }, placeholderImage: AppConstants.placeholderImg)
+        if let imageUrlStr = self.viewModel.detailPageViewModel?.imageUrlStr, !imageUrlStr.isEmpty {
             self.fishImageView.loadImageUsingCache(withUrl: imageUrlStr)
         } else {
             self.fishImageView.image = AppConstants.placeholderImg

@@ -8,12 +8,12 @@
 import Foundation
 
 protocol FishSpeciesServiceProtocol {
-    func getFishSpecies(completion: @escaping (_ success: Bool, _ results: Fish?, _ error: String?) -> ())
+    func getFishSpecies(completion: @escaping (_ success: Bool, _ results: Fish?, _ error: String?) -> Void)
 }
 
 class FishService: FishSpeciesServiceProtocol {
-    func getFishSpecies(completion: @escaping (Bool, Fish?, String?) -> ()) {
-        HttpRequestHelper().GET(url: AppConstants.Fishwatch_EndPoint_URLString, params: ["": ""], httpHeader: .application_json) { success, data in
+    func getFishSpecies(completion: @escaping (Bool, Fish?, String?) -> Void) {
+        HttpRequestHelper().GET(url: AppConstants.FishwatchEndPointURLString, params: ["": ""], httpHeader: .applicationJson) { success, data in
             if success {
                 do {
                     let model = try JSONDecoder().decode(Fish.self, from: data!)
@@ -26,14 +26,12 @@ class FishService: FishSpeciesServiceProtocol {
                 } catch let DecodingError.valueNotFound(value, context) {
                     print("Value '\(value)' not found:", context.debugDescription)
                     print("codingPath:", context.codingPath)
-                } catch let DecodingError.typeMismatch(type, context)  {
+                } catch let DecodingError.typeMismatch(type, context) {
                     print("Type '\(type)' mismatch:", context.debugDescription)
                     print("codingPath:", context.codingPath)
                 } catch {
                     print("error: ", error)
-                }/*catch {
-                    completion(false, nil, "Error: Trying to parse Fishes to model")
-                }*/
+                }
             } else {
                 completion(false, nil, "Error: Fishes GET Request failed")
             }

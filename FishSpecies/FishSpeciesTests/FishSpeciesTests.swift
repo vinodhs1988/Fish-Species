@@ -113,6 +113,6 @@ class FishSpeciesTests: XCTestCase {
     }
     
     func testDeviceIsJailBroken(){
-        
+        XCTAssertNotNil(UIDevice.current.isJailBroken)
     }
 }

@@ -16,6 +16,8 @@ class HomeViewController: UIViewController{
         HomeViewModel()
     }()
     
+    var activityIndicatorView: ActivityIndicatorView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -42,12 +44,17 @@ class HomeViewController: UIViewController{
         
         navigationController?.hidesBarsOnSwipe = false
         
+        self.activityIndicatorView = ActivityIndicatorView(title: "Downloading Data...", center: self.view.center)
+        self.view.addSubview(self.activityIndicatorView.getViewActivityIndicator())
+        self.activityIndicatorView.startAnimating()
     }
+    
     func initViewModel() {
         viewModel.getfishSpeciesDetails()
         
         viewModel.reloadTableView = { [weak self] in
             DispatchQueue.main.async {
+                self?.activityIndicatorView.stopAnimating()
                 self?.tableView.reloadData()
             }
         }

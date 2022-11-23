@@ -31,6 +31,7 @@
 		18FEC51D292D37450074B5F0 /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC51C292D37450074B5F0 /* CommonExtensions.swift */; };
 		18FEC51F292DD59D0074B5F0 /* MockServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC51E292DD59D0074B5F0 /* MockServiceTests.swift */; };
 		18FEC521292DD76E0074B5F0 /* UnitTestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC520292DD76E0074B5F0 /* UnitTestData.json */; };
+		18FEC52A292DE8870074B5F0 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC529292DE8870074B5F0 /* ActivityIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		18FEC51C292D37450074B5F0 /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		18FEC51E292DD59D0074B5F0 /* MockServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceTests.swift; sourceTree = "<group>"; };
 		18FEC520292DD76E0074B5F0 /* UnitTestData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UnitTestData.json; sourceTree = "<group>"; };
+		18FEC529292DE8870074B5F0 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				18FEC4F4292C9A9C0074B5F0 /* HttpRequestHelper.swift */,
+				18FEC529292DE8870074B5F0 /* ActivityIndicatorView.swift */,
 				18FEC505292C9DCB0074B5F0 /* AppConstants.swift */,
 				18FEC51C292D37450074B5F0 /* CommonExtensions.swift */,
 			);
@@ -411,6 +414,7 @@
 				18FEC4F5292C9A9C0074B5F0 /* HttpRequestHelper.swift in Sources */,
 				18FEC51D292D37450074B5F0 /* CommonExtensions.swift in Sources */,
 				18FEC4C6292C8A570074B5F0 /* SceneDelegate.swift in Sources */,
+				18FEC52A292DE8870074B5F0 /* ActivityIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,8 +13,8 @@ class HomeCell: UITableViewCell {
     @IBOutlet var scientificNameLabel: UILabel!
     @IBOutlet var fishImageView: UIImageView!
 
-    class var identifier: String { return String(describing: self) }
-    class var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
+    static var identifier: String { return String(describing: self) }
+    static var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
 
     var cellViewModel: HomeCellViewModel? {
         didSet {
@@ -30,21 +30,17 @@ class HomeCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
         initView()
     }
 
-    func initView() {
+    private func initView() {
         backgroundColor = .clear
         preservesSuperviewLayoutMargins = false
         separatorInset = UIEdgeInsets.zero
         layoutMargins = UIEdgeInsets.zero
         
         fishImageView.layer.cornerRadius = fishImageView.bounds.size.height / 2
-        fishImageView.layer.shadowColor = UIColor.black.cgColor
-        fishImageView.layer.shadowOffset = CGSize(width: 0, height: 2)
-        fishImageView.layer.shadowOpacity = 1
         fishImageView.backgroundColor = UIColor.white
 
     }

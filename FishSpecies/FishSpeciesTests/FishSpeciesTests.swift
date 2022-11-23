@@ -28,8 +28,6 @@ class FishSpeciesTests: XCTestCase {
         sut.viewModel = viewModel
         sut.loadViewIfNeeded()
         sut.viewDidLoad()
-        sut.initView()
-        sut.initViewModel()
         return sut
     }
     

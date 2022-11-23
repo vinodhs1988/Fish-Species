@@ -15,8 +15,8 @@ class DetailViewController: UIViewController{
         DetailViewModel()
     }()
 
-    @IBOutlet var fishDetailTextView: UITextView!
-    @IBOutlet var fishImageView: UIImageView!
+    @IBOutlet private var fishDetailTextView: UITextView!
+    @IBOutlet private var fishImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

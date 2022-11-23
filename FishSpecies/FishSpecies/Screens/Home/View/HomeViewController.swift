@@ -16,7 +16,7 @@ class HomeViewController: UIViewController{
         HomeViewModel()
     }()
     
-    var activityIndicatorView: ActivityIndicatorView!
+    private var activityIndicatorView: ActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class HomeViewController: UIViewController{
 
     }
     
-    func initView() {
+    private func initView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorColor = .darkGray
@@ -49,7 +49,7 @@ class HomeViewController: UIViewController{
         self.activityIndicatorView.startAnimating()
     }
     
-    func initViewModel() {
+    private func initViewModel() {
         viewModel.getfishSpeciesDetails()
         
         viewModel.reloadTableView = { [weak self] in
@@ -61,7 +61,7 @@ class HomeViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier ==  "moveToDetailPage"{
+        if segue.identifier ==  AppConstants.DetailPageSegueIdentifier{
             let destVC = segue.destination as? DetailViewController
             let fishSpeciesDetail = viewModel.getFishSpecies(at: self.tableView.indexPathForSelectedRow ?? IndexPath(row: 0, section: 0))
             destVC?.viewModel.fishSpeciesDetail = fishSpeciesDetail
@@ -72,7 +72,7 @@ class HomeViewController: UIViewController{
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "moveToDetailPage", sender: self)
+        self.performSegue(withIdentifier: AppConstants.DetailPageSegueIdentifier, sender: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

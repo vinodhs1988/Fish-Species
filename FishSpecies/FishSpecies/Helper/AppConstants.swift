@@ -13,4 +13,6 @@ struct AppConstants{
     static let Fishwatch_EndPoint_URLString = "https://www.fishwatch.gov/api/species"
     
     static let placeholderImg =  UIImage(named: "placeholderImg")
+    
+    static let DetailPageSegueIdentifier = "moveToDetailPage"
 }

@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 class ActivityIndicatorView {
-    var view: UIView!
+    private var view: UIView!
     
-    var activityIndicator: UIActivityIndicatorView!
+    private var activityIndicator: UIActivityIndicatorView!
     
-    var title: String!
+    private var title: String!
     
     init(title: String, center: CGPoint, width: CGFloat = 250.0, height: CGFloat = 50.0) {
         self.title = title

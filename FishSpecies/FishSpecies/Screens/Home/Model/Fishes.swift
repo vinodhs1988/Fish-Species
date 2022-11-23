@@ -5,11 +5,6 @@
 //  Created by MacBook Pro on 22/11/22.
 //
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let fish = try? newJSONDecoder().decode(Fish.self, from: jsonData)
-
 import Foundation
 
 // MARK: - FishElement

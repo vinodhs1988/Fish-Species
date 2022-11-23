@@ -13,9 +13,9 @@ class HomeViewModel: NSObject{
     
     var reloadTableView: (() -> Void)?
     
-    var fishSpecies = Fish()
+    private var fishSpecies = Fish()
     
-    var homeCellViewModels = [HomeCellViewModel]() {
+    private var homeCellViewModels = [HomeCellViewModel]() {
         didSet {
             reloadTableView?()
         }

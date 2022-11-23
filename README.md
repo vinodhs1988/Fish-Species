@@ -1,2 +1,7 @@
 # Fish-Species
-iOS swift project used MVVM
+
+This project was developed in MVVM architecture 
+
+
+#System Requirement
+ XCode 13

@@ -4,15 +4,15 @@ This project was developed in MVVM architecture
 
 This project loads the data from the API `https://www.fishwatch.gov/api/species`
 
-## Minimum iOS vevrsion Supported
+### Minimum iOS vevrsion Supported
 
 iOS 13
 
-## Devices Supported
+### Devices Supported
 1. iPhone
 2. iPad
 
-## Concepts Covered 
+### Concepts Covered 
 1. MVVM
 2. SOLID principles
 3. Secutiy measures - Jail break detection
@@ -32,6 +32,6 @@ SDWebImage is used to download high resolution images and load them in Cell. Rea
 
 Above library added as SPM to the project
 
-## System Requirement
+### System Requirement
  mac OS Monterey
  XCode 13

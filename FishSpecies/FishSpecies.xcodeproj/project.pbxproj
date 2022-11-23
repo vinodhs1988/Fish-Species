@@ -759,8 +759,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
-				kind = versionRange;
-				maximumVersion = 6.0.0;
+				kind = upToNextMajorVersion;
 				minimumVersion = 5.1.0;
 			};
 		};

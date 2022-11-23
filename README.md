@@ -9,8 +9,7 @@ This project loads the data from the API `https://www.fishwatch.gov/api/species`
 iOS 13
 
 ### Devices Supported
-1. iPhone
-2. iPad
+  iPhone
 
 ### Concepts Covered 
 1. MVVM

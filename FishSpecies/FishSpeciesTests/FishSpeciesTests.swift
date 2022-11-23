@@ -11,12 +11,15 @@ import XCTest
 class FishSpeciesTests: XCTestCase {
     
     var viewModel = HomeViewModel(fishSpeciesService: MockService())
+    let detailViewModel = DetailViewModel()
     
     var vc: HomeViewController!
-    
+    var detailvc: DetailViewController!
+
     override func setUp() {
         super.setUp()
         vc = makeSUT()
+        detailvc = makeDetailPageSUT()
     }
     
     func makeSUT() -> HomeViewController {
@@ -30,6 +33,14 @@ class FishSpeciesTests: XCTestCase {
         return sut
     }
     
+    func makeDetailPageSUT() -> DetailViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut = storyboard.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        sut.viewModel = detailViewModel
+        sut.loadViewIfNeeded()
+        sut.viewDidLoad()
+        return sut
+    }
     
     func testNavigationItemTitle() {
         XCTAssertEqual(vc.navigationItem.title, "Fish Species")
@@ -95,5 +106,11 @@ class FishSpeciesTests: XCTestCase {
 
     func testDidSelectAction(){
         vc.tableView(vc.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+    }
+    
+    func testDetailPageDataLoading(){
+        let fishSpeciesDetail = vc.viewModel.getFishSpecies(at: IndexPath(row: 0, section: 0))
+        detailvc.viewModel.fishSpeciesDetail = fishSpeciesDetail
+        XCTAssertEqual(detailvc.viewModel.detailPageViewModel?.imageUrlStr, fishSpeciesDetail.speciesIllustrationPhoto?.src)
     }
 }

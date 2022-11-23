@@ -29,10 +29,10 @@ class DetailViewController: UIViewController{
         fishImageView.backgroundColor = UIColor.white
 
         if let imageUrlStr = self.viewModel.detailPageViewModel?.imageUrlStr, !imageUrlStr.isEmpty{
-            ImageDownloader.shared.downloadImage(with: imageUrlStr, completionHandler: { downloadedimage, isDownloaded in
-                self.fishImageView.image = downloadedimage
-            }, placeholderImage: AppConstants.placeholderImg)
-
+//            ImageDownloader.shared.downloadImage(with: imageUrlStr, completionHandler: { downloadedimage, isDownloaded in
+//                self.fishImageView.image = downloadedimage
+//            }, placeholderImage: AppConstants.placeholderImg)
+            self.fishImageView.loadImageUsingCache(withUrl: imageUrlStr)
         } else {
             self.fishImageView.image = AppConstants.placeholderImg
         }

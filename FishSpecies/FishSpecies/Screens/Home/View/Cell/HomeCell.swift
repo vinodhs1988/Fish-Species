@@ -21,9 +21,10 @@ class HomeCell: UITableViewCell {
             nameLabel.text = cellViewModel?.name
             scientificNameLabel.text = cellViewModel?.scientificName
             if let imageUrlStr = cellViewModel?.imageUrlStr{
-                ImageDownloader.shared.downloadImage(with: imageUrlStr, completionHandler: { downloadedimage, isDownloaded in
-                        self.fishImageView.image = downloadedimage
-                }, placeholderImage: AppConstants.placeholderImg)
+//                ImageDownloader.shared.downloadImage(with: imageUrlStr, completionHandler: { downloadedimage, isDownloaded in
+//                        self.fishImageView.image = downloadedimage
+//                }, placeholderImage: AppConstants.placeholderImg)
+                self.fishImageView.loadImageUsingCache(withUrl: imageUrlStr)
             }
         }
     }

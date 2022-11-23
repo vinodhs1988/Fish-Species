@@ -33,5 +33,5 @@ SDWebImage is used to download high resolution images and load them in Cell. Rea
 Above library added as SPM to the project
 
 ### System Requirement
- mac OS Monterey
- XCode 13
+ 1. mac OS Monterey
+ 2. XCode 13

@@ -26,12 +26,10 @@ class FishListViewModel: NSObject {
     }
     
     func getfishSpeciesDetails() {
-        fishSpeciesService.getFishSpecies { success, results, error in
+        fishSpeciesService.getFishSpecies { success, results, _ in
             if success, let fishSpecies = results {
                 self.fetchData(fishSpecies: fishSpecies)
-            } else {
-                print(error!)
-            }
+            } 
         }
     }
     

@@ -15,7 +15,7 @@ class FishSpeciesTests: XCTestCase {
     
     var listVC: FishListViewController!
     var detailVC: FishDetailViewController!
-
+    
     override func setUp() {
         super.setUp()
         listVC = makeSUT()
@@ -61,26 +61,26 @@ class FishSpeciesTests: XCTestCase {
     func testTableViewHasDataSource() {
         XCTAssertNotNil(listVC.tableView.dataSource)
     }
-
+    
     func testTableViewConfromsToTableViewDelegateProtocol() {
         XCTAssertTrue(listVC.conforms(to: UITableViewDelegate.self))
         XCTAssertTrue(listVC.responds(to: #selector(listVC.tableView(_:didSelectRowAt:))))
         XCTAssertTrue(listVC.responds(to: #selector(listVC.tableView(_:heightForRowAt:))))
     }
-
+    
     func testTableViewConformsToTableViewDataSourceProtocol() {
         XCTAssertTrue(listVC.conforms(to: UITableViewDataSource.self))
         XCTAssertTrue(listVC.responds(to: #selector(listVC.tableView(_:numberOfRowsInSection:))))
         XCTAssertTrue(listVC.responds(to: #selector(listVC.tableView(_:cellForRowAt:))))
     }
-
+    
     func testTableViewCellHasReuseIdentifier() {
         let cell = listVC.tableView(listVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? FishListCell
         let actualReuseIdentifer = cell?.reuseIdentifier
         let expectedReuseIdentifier = FishListCell.identifier
         XCTAssertEqual(actualReuseIdentifer, expectedReuseIdentifier)
     }
-
+    
     func testTableCellHasCorrectLabelText() {
         let indexPath0 = IndexPath(row: 0, section: 0)
         let cell0 = listVC.tableView(listVC.tableView, cellForRowAt: indexPath0) as? FishListCell
@@ -92,7 +92,7 @@ class FishSpeciesTests: XCTestCase {
         let cell2 = listVC.tableView(listVC.tableView, cellForRowAt: indexPath2) as? FishListCell
         XCTAssertEqual(cell2?.scientificNameLabel.text, listVC.viewModel.getCellViewModel(at: indexPath2).scientificName)
     }
-
+    
     func testDidSelectAction() {
         listVC.tableView(listVC.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
     }
@@ -102,6 +102,24 @@ class FishSpeciesTests: XCTestCase {
         XCTAssertEqual(detailVC.viewModel.detailPageViewModel?.imageUrlStr, fishSpeciesDetail.speciesIllustrationPhoto?.src)
     }
     func testDeviceIsJailBroken() {
-        XCTAssertNotNil(UIDevice.current.isJailBroken)
+        XCTAssertNotNil(UIDevice.current.isJailBroken())
     }
+    func testAPIWorking() {
+        let expectation = XCTestExpectation.init(description: "Fish Species Service expectation")
+        let fishSpeciesService: FishSpeciesServiceProtocol = FishService()
+        fishSpeciesService.getFishSpecies { success, results, error in
+            if error != nil {
+                XCTFail("Fail")
+            }
+            if success, let fishSpecies = results {
+                if !fishSpecies.isEmpty {
+                    expectation.fulfill()
+                }
+            } else {
+                expectation.fulfill()
+            }
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
 }

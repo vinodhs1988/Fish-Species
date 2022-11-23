@@ -16,7 +16,7 @@ iOS 13
 1. MVVM
 2. SOLID principles
 3. Secutiy measures - Jail break detection
-  Jail break detection code added as a extension of `UIDevice`. To test the Jail break detection code go to `CommonExtensions.swift` file and `return TRUE` in that method. Now if you run the app, you will see alert without okay button.
+  Jail break detection code added as a extension of `UIDevice`. To test the Jail break detection code go to `CommonExtensions.swift` file and `return TRUE` in that method. To test in simulator comment out the line `if UIDevice.current.isSimulator { return false }`. Now if you run the app, you will see alert without okay button.
   
  Logic used to detect device is JailBroken
  1. Jail broken app like Cydia app is installed in Device or not

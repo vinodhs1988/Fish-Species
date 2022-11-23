@@ -36,6 +36,6 @@ class DetailViewController: UIViewController{
         } else {
             self.fishImageView.image = AppConstants.placeholderImg
         }
-        self.fishDetailTextView.text = self.viewModel.detailPageViewModel?.pageDescription
+        self.fishDetailTextView.attributedText = self.viewModel.detailPageViewModel?.pageDescription.htmlToAttributedString
     }
 }

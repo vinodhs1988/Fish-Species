@@ -40,7 +40,7 @@ class HomeCell: UITableViewCell {
         separatorInset = UIEdgeInsets.zero
         layoutMargins = UIEdgeInsets.zero
         
-        fishImageView.layer.cornerRadius = fishImageView.bounds.size.height / 2
+        fishImageView.layer.cornerRadius = 10
         fishImageView.backgroundColor = UIColor.white
 
     }

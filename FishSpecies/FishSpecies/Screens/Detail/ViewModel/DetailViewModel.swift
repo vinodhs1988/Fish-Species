@@ -29,7 +29,7 @@ class DetailViewModel: NSObject{
     func createDetailPageModel() {
         let imageUrlStr = fishSpeciesDetail?.speciesIllustrationPhoto?.src ?? ""
         let pageDescriptionArr : [String] = [(fishSpeciesDetail?.speciesName ?? "") , (fishSpeciesDetail?.scientificName ?? "") ,(fishSpeciesDetail?.physicalDescription ?? "") , (fishSpeciesDetail?.harvest ?? "") , (fishSpeciesDetail?.population ?? "") , (fishSpeciesDetail?.populationStatus ?? "")]
-        let pageDescription = pageDescriptionArr.joined(separator: "\n\n")
+        let pageDescription = pageDescriptionArr.joined(separator: "<br/><br/>")
         self.detailPageViewModel = DetailPageViewModel(imageUrlStr: imageUrlStr, pageDescription: pageDescription)
     }
 }

@@ -23,15 +23,6 @@ iOS 13
  2. Able to open/write system related file or not
 
 
-
-### 3rd Party Dependency  
-
-https://github.com/SDWebImage/SDWebImage
-
-SDWebImage is used to download high resolution images and load them in Cell. Reason we used it becasue, it has caching mechnism even for high resolution images, and load them quickly 
-
-Above library added as SPM to the project
-
 ### System Requirement
  1. mac OS Monterey
  2. XCode 13

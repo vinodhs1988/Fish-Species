@@ -29,8 +29,7 @@ extension UIDevice {
     
     var isJailBroken: Bool {
         get {
-            // To test Jailbroken comment below line to test it
-            //if UIDevice.current.isSimulator { return false }
+            if UIDevice.current.isSimulator { return false }
             if JailBrokenHelper.hasCydiaInstalled() { return true }
             if JailBrokenHelper.isContainsSuspiciousApps() { return true }
             if JailBrokenHelper.isSuspiciousSystemPathsExists() { return true }
@@ -41,7 +40,6 @@ extension UIDevice {
     
 private struct JailBrokenHelper {
     static func hasCydiaInstalled() -> Bool {
-        return true
         return UIApplication.shared.canOpenURL(URL(string: "cydia://")!)
     }
     

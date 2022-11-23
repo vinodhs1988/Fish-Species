@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 class HomeCell: UITableViewCell {
 
@@ -22,7 +21,9 @@ class HomeCell: UITableViewCell {
             nameLabel.text = cellViewModel?.name
             scientificNameLabel.text = cellViewModel?.scientificName
             if let imageUrlStr = cellViewModel?.imageUrlStr{
-                fishImageView.sd_setImage(with: URL(string: imageUrlStr), placeholderImage:AppConstants.placeholderImg)
+                ImageDownloader.shared.downloadImage(with: imageUrlStr, completionHandler: { downloadedimage, isDownloaded in
+                        self.fishImageView.image = downloadedimage
+                }, placeholderImage: AppConstants.placeholderImg)
             }
         }
     }
@@ -39,6 +40,13 @@ class HomeCell: UITableViewCell {
         preservesSuperviewLayoutMargins = false
         separatorInset = UIEdgeInsets.zero
         layoutMargins = UIEdgeInsets.zero
+        
+        fishImageView.layer.cornerRadius = fishImageView.bounds.size.height / 2
+        fishImageView.layer.shadowColor = UIColor.black.cgColor
+        fishImageView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        fishImageView.layer.shadowOpacity = 1
+        fishImageView.backgroundColor = UIColor.white
+
     }
 
     override func prepareForReuse() {

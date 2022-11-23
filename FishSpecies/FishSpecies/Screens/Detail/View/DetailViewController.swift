@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import SDWebImage
 
 
 class DetailViewController: UIViewController{
@@ -25,10 +24,15 @@ class DetailViewController: UIViewController{
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         self.navigationItem.title = self.viewModel.fishSpeciesDetail?.speciesName
-        self.fishImageView.contentMode = .scaleAspectFill
+
+        fishImageView.layer.cornerRadius = 20.0
+        fishImageView.backgroundColor = UIColor.white
 
         if let imageUrlStr = self.viewModel.detailPageViewModel?.imageUrlStr, !imageUrlStr.isEmpty{
-            self.fishImageView.sd_setImage(with: URL(string: imageUrlStr), placeholderImage:AppConstants.placeholderImg)
+            ImageDownloader.shared.downloadImage(with: imageUrlStr, completionHandler: { downloadedimage, isDownloaded in
+                self.fishImageView.image = downloadedimage
+            }, placeholderImage: AppConstants.placeholderImg)
+
         } else {
             self.fishImageView.image = AppConstants.placeholderImg
         }

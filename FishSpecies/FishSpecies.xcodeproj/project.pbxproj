@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184FD396292E4B8800ADE941 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184FD395292E4B8800ADE941 /* ImageDownloader.swift */; };
 		18FEC4C4292C8A570074B5F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4C3292C8A570074B5F0 /* AppDelegate.swift */; };
 		18FEC4C6292C8A570074B5F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4C5292C8A570074B5F0 /* SceneDelegate.swift */; };
 		18FEC4CB292C8A570074B5F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC4C9292C8A570074B5F0 /* Main.storyboard */; };
@@ -26,8 +27,6 @@
 		18FEC50F292CB3B90074B5F0 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC50D292CB3B90074B5F0 /* HomeCell.xib */; };
 		18FEC513292D0B7F0074B5F0 /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC512292D0B7F0074B5F0 /* HomeCellViewModel.swift */; };
 		18FEC516292D0E630074B5F0 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC515292D0E630074B5F0 /* DetailViewModel.swift */; };
-		18FEC519292D14560074B5F0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18FEC518292D14560074B5F0 /* SDWebImage */; };
-		18FEC51B292D14560074B5F0 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 18FEC51A292D14560074B5F0 /* SDWebImageMapKit */; };
 		18FEC51D292D37450074B5F0 /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC51C292D37450074B5F0 /* CommonExtensions.swift */; };
 		18FEC51F292DD59D0074B5F0 /* MockServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC51E292DD59D0074B5F0 /* MockServiceTests.swift */; };
 		18FEC521292DD76E0074B5F0 /* UnitTestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC520292DD76E0074B5F0 /* UnitTestData.json */; };
@@ -52,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184FD395292E4B8800ADE941 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		18FEC4C0292C8A570074B5F0 /* FishSpecies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishSpecies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FEC4C3292C8A570074B5F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FEC4C5292C8A570074B5F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,8 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FEC51B292D14560074B5F0 /* SDWebImageMapKit in Frameworks */,
-				18FEC519292D14560074B5F0 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +168,7 @@
 				18FEC529292DE8870074B5F0 /* ActivityIndicatorView.swift */,
 				18FEC505292C9DCB0074B5F0 /* AppConstants.swift */,
 				18FEC51C292D37450074B5F0 /* CommonExtensions.swift */,
+				184FD395292E4B8800ADE941 /* ImageDownloader.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -278,8 +277,6 @@
 			);
 			name = FishSpecies;
 			packageProductDependencies = (
-				18FEC518292D14560074B5F0 /* SDWebImage */,
-				18FEC51A292D14560074B5F0 /* SDWebImageMapKit */,
 			);
 			productName = FishSpecies;
 			productReference = 18FEC4C0292C8A570074B5F0 /* FishSpecies.app */;
@@ -354,7 +351,6 @@
 			);
 			mainGroup = 18FEC4B7292C8A570074B5F0;
 			packageReferences = (
-				18FEC517292D14560074B5F0 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 18FEC4C1292C8A570074B5F0 /* Products */;
 			projectDirPath = "";
@@ -402,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18FEC513292D0B7F0074B5F0 /* HomeCellViewModel.swift in Sources */,
+				184FD396292E4B8800ADE941 /* ImageDownloader.swift in Sources */,
 				18FEC4FE292C9B690074B5F0 /* HomeViewController.swift in Sources */,
 				18FEC506292C9DCB0074B5F0 /* AppConstants.swift in Sources */,
 				18FEC4C4292C8A570074B5F0 /* AppDelegate.swift in Sources */,
@@ -753,30 +750,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		18FEC517292D14560074B5F0 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		18FEC518292D14560074B5F0 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 18FEC517292D14560074B5F0 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-		18FEC51A292D14560074B5F0 /* SDWebImageMapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 18FEC517292D14560074B5F0 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImageMapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18FEC4B8292C8A570074B5F0 /* Project object */;
 }

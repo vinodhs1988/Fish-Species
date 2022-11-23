@@ -28,7 +28,7 @@ extension UIDevice {
         return TARGET_OS_SIMULATOR != 0
     }
     
-    func isJailBroken() -> Bool{
+    func isJailBroken() -> Bool {
         if UIDevice.current.isSimulator { return false }
         if JailBrokenHelper.hasCydiaInstalled() { return true }
         if JailBrokenHelper.isContainsSuspiciousApps() { return true }

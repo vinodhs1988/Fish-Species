@@ -16,4 +16,5 @@ struct AppConstants {
     static let JailBrokenDeviceAlertMessage = "Sorry, your iOS seems to be modified. This app is only supported on unmodified versions of iOS."
     static let kEmptyStr = ""
     static let doubleHTMLBreak = "<br/><br/>"
+    static let downloadingStr =  "Downloading Data..."
 }

@@ -15,16 +15,14 @@ class FishListViewController: UIViewController {
     lazy var viewModel = {
         FishListViewModel()
     }()
-    
-    private var activityIndicatorView: ActivityIndicatorView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         registerNib()
-        prepareActivityIndicatorView()
-        
-        fetchSpeciesDetails()
+        Loader.showProgressView(title: AppConstants.downloadingStr, context: self.view)
+
+        fetchSpeciesDetailsAndLoadData()
     }
     
     private func setupTableView() {
@@ -41,18 +39,12 @@ class FishListViewController: UIViewController {
         tableView.register(FishListCell.nib, forCellReuseIdentifier: FishListCell.identifier)
     }
     
-    private func prepareActivityIndicatorView() {
-        self.activityIndicatorView = ActivityIndicatorView(title: "Downloading Data...", center: self.view.center)
-        self.view.addSubview(self.activityIndicatorView.getViewActivityIndicator())
-        self.activityIndicatorView.startAnimating()
-    }
-    
-    private func fetchSpeciesDetails() {
+    private func fetchSpeciesDetailsAndLoadData() {
         viewModel.getfishSpeciesDetails()
         
         viewModel.reloadTableView = { [weak self] in
             DispatchQueue.main.async {
-                self?.activityIndicatorView.stopAnimating()
+                Loader.hideProgressView()
                 self?.tableView.reloadData()
             }
         }

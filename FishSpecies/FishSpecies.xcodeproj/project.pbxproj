@@ -195,8 +195,8 @@
 		18FEC4F9292C9B130074B5F0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				18FEC508292CAED70074B5F0 /* Home */,
-				18FEC509292CAEE40074B5F0 /* Detail */,
+				18FEC508292CAED70074B5F0 /* FishList */,
+				18FEC509292CAEE40074B5F0 /* FishDetail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -227,23 +227,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18FEC508292CAED70074B5F0 /* Home */ = {
+		18FEC508292CAED70074B5F0 /* FishList */ = {
 			isa = PBXGroup;
 			children = (
 				18FEC4FA292C9B210074B5F0 /* Model */,
 				18FEC4FB292C9B290074B5F0 /* View */,
 				18FEC4FC292C9B3A0074B5F0 /* ViewModel */,
 			);
-			path = Home;
+			path = FishList;
 			sourceTree = "<group>";
 		};
-		18FEC509292CAEE40074B5F0 /* Detail */ = {
+		18FEC509292CAEE40074B5F0 /* FishDetail */ = {
 			isa = PBXGroup;
 			children = (
 				18FEC514292D0E2D0074B5F0 /* ViewModel */,
 				18FEC50A292CB0830074B5F0 /* View */,
 			);
-			path = Detail;
+			path = FishDetail;
 			sourceTree = "<group>";
 		};
 		18FEC50A292CB0830074B5F0 /* View */ = {

@@ -24,6 +24,17 @@ class FishListViewController: UIViewController {
         
         fetchSpeciesDetailsAndLoadData()
     }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  AppConstants.DetailPageSegueIdentifier {
+            let destVC = segue.destination as? FishDetailViewController
+            let fishSpeciesDetail = viewModel.getFishSpecies(at: self.tableView.indexPathForSelectedRow ?? IndexPath(row: 0, section: 0))
+            destVC?.viewModel.fishSpeciesDetail = fishSpeciesDetail
+        }
+    }
+}
+
+extension FishListViewController {
     
     private func showLoader() {
         Loader.showProgressView(title: AppConstants.downloadingStr, context: self.view)
@@ -53,16 +64,7 @@ class FishListViewController: UIViewController {
             }
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier ==  AppConstants.DetailPageSegueIdentifier {
-            let destVC = segue.destination as? FishDetailViewController
-            let fishSpeciesDetail = viewModel.getFishSpecies(at: self.tableView.indexPathForSelectedRow ?? IndexPath(row: 0, section: 0))
-            destVC?.viewModel.fishSpeciesDetail = fishSpeciesDetail
-        }
-    }
 }
-
 extension FishListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

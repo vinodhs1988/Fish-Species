@@ -9,14 +9,11 @@ import UIKit
 import SDWebImage
 
 class FishListCell: UITableViewCell {
-
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var scientificNameLabel: UILabel!
-    @IBOutlet var fishImageView: UIImageView!
-
-    static var identifier: String { return String(describing: self) }
-    static var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
-
+    
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var scientificNameLabel: UILabel!
+    @IBOutlet private var fishImageView: UIImageView!
+    
     var cellViewModel: FishListCellViewModel? {
         didSet {
             nameLabel.text = cellViewModel?.name
@@ -26,29 +23,33 @@ class FishListCell: UITableViewCell {
             }
         }
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        initView()
+        setupView()
     }
-
-    private func initView() {
+    
+    private func setupView() {
         backgroundColor = .clear
         preservesSuperviewLayoutMargins = false
         separatorInset = UIEdgeInsets.zero
         layoutMargins = UIEdgeInsets.zero
-        
+    }
+    
+    private func setupImageView() {
         fishImageView.layer.cornerRadius = 10
         fishImageView.backgroundColor = UIColor.white
-
     }
-
+    
     override func prepareForReuse() {
         super.prepareForReuse()
+        resetCellValues()
+    }
+    
+    private func resetCellValues() {
         fishImageView.image = UIImage()
         fishImageView.image = nil
         nameLabel.text = nil
         scientificNameLabel.text = nil
     }
-
 }

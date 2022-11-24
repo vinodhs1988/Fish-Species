@@ -14,4 +14,6 @@ struct AppConstants {
     static let placeholderImg =  UIImage(named: "placeholderImg")
     static let DetailPageSegueIdentifier = "moveToDetailPage"
     static let JailBrokenDeviceAlertMessage = "Sorry, your iOS seems to be modified. This app is only supported on unmodified versions of iOS."
+    static let kEmptyStr = ""
+    static let doubleHTMLBreak = "<br/><br/>"
 }

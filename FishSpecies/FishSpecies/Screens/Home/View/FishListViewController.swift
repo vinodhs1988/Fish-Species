@@ -20,28 +20,34 @@ class FishListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initView()
+        setupTableView()
+        registerNib()
+        prepareActivityIndicatorView()
         
-        initViewModel()
+        fetchSpeciesDetails()
     }
     
-    private func initView() {
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorColor = .darkGray
         tableView.separatorStyle = .singleLine
         tableView.tableFooterView = UIView()
         
-        tableView.register(FishListCell.nib, forCellReuseIdentifier: FishListCell.identifier)
-        
         navigationController?.hidesBarsOnSwipe = false
-        
+    }
+    
+    private func registerNib() {
+        tableView.register(FishListCell.nib, forCellReuseIdentifier: FishListCell.identifier)
+    }
+    
+    private func prepareActivityIndicatorView() {
         self.activityIndicatorView = ActivityIndicatorView(title: "Downloading Data...", center: self.view.center)
         self.view.addSubview(self.activityIndicatorView.getViewActivityIndicator())
         self.activityIndicatorView.startAnimating()
     }
     
-    private func initViewModel() {
+    private func fetchSpeciesDetails() {
         viewModel.getfishSpeciesDetails()
         
         viewModel.reloadTableView = { [weak self] in

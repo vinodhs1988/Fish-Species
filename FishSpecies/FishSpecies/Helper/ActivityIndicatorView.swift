@@ -49,4 +49,5 @@ class ActivityIndicatorView {
         self.view.removeFromSuperview()
     }
     
+    // create one method for show and another for hide
 }

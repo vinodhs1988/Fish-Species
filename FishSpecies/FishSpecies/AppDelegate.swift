@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         if UIDevice.current.isJailBroken() {
+            // move alert to common class
             let alertStyle = UIAlertController.Style.alert
             let alertTitle = "System Requirements"
             let alert = UIAlertController(title: alertTitle, message: AppConstants.JailBrokenDeviceAlertMessage, preferredStyle: alertStyle)

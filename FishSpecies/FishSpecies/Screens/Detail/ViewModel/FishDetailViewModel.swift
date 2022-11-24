@@ -26,14 +26,14 @@ class FishDetailViewModel: NSObject {
     override init() { }
     
     func createDetailPageModel() {
-        let imageUrlStr = fishSpeciesDetail?.speciesIllustrationPhoto?.src ?? ""
-        let pageDescriptionArr: [String] = [(fishSpeciesDetail?.speciesName ?? ""),
-                                             (fishSpeciesDetail?.scientificName ?? ""),
-                                             (fishSpeciesDetail?.physicalDescription ?? ""),
-                                             (fishSpeciesDetail?.harvest ?? ""),
-                                             (fishSpeciesDetail?.population ?? ""),
-                                             (fishSpeciesDetail?.populationStatus ?? "")]
-        let pageDescription = pageDescriptionArr.joined(separator: "<br/><br/>")
+        let imageUrlStr = fishSpeciesDetail?.speciesIllustrationPhoto?.src ?? AppConstants.kEmptyStr
+        let pageDescriptionArr: [String] = [(fishSpeciesDetail?.speciesName ?? AppConstants.kEmptyStr),
+                                            (fishSpeciesDetail?.scientificName ?? AppConstants.kEmptyStr),
+                                            (fishSpeciesDetail?.physicalDescription ?? AppConstants.kEmptyStr),
+                                            (fishSpeciesDetail?.harvest ?? AppConstants.kEmptyStr),
+                                            (fishSpeciesDetail?.population ?? AppConstants.kEmptyStr),
+                                            (fishSpeciesDetail?.populationStatus ?? AppConstants.kEmptyStr)]
+        let pageDescription = pageDescriptionArr.joined(separator: AppConstants.doubleHTMLBreak)
         self.detailPageViewModel = DetailPageViewModel(imageUrlStr: imageUrlStr, pageDescription: pageDescription)
     }
 }

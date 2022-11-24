@@ -13,16 +13,16 @@ protocol FishSpeciesServiceProtocol {
 
 class FishService: FishSpeciesServiceProtocol {
     func getFishSpecies(completion: @escaping (Bool, Fish?, String?) -> Void) {
-        HttpRequestHelper().GET(url: AppConstants.FishwatchEndPointURLString, params: ["": ""], httpHeader: .applicationJson) { success, data in
+        HttpRequestHelper().GET(url: AppConstants.FishwatchEndPointURLString, params: ["": ""], httpHeader: .applicationJson) { success, data, err  in
             if success {
                 do {
                     let model = try JSONDecoder().decode(Fish.self, from: data!)
                     completion(true, model, nil)
                 } catch {
-                    completion(false, nil, "Error: Trying to parse Fishes to model")
+                    completion(false, nil, "Error: \(err?.errorDescription ?? AppConstants.kEmptyStr)")
                 }
             } else {
-                completion(false, nil, "Error: Fishes GET Request failed")
+                completion(false, nil, "Error: \(err?.errorDescription ?? AppConstants.kEmptyStr)")
             }
         }
     }

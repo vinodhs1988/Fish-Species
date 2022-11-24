@@ -160,21 +160,6 @@ class FishSpeciesTests: XCTestCase {
         XCTAssertNotNil(JailBrokenHelper.isSuspiciousSystemPathsExists())
         XCTAssertNotNil(JailBrokenHelper.canEditSystemFiles())
     }
-
-    func testImageDownloading() {
-        var fishImageView = UIImageView()
-        let imageURLStr = "https://origin-east-01-drupal-fishwatch.woc.noaa.gov/sites/default/files/Pink_snapper_NB_W_0.png"
-        fishImageView.loadImageUsingCache(withUrl: imageURLStr)
-        observer = fishImageView.observe(\.image, options: [.old, .new], changeHandler: {(imageView, _) in
-            XCTAssertNotNil(imageView.image)
-        })
-        
-        fishImageView = UIImageView()
-        fishImageView.loadImageUsingCache(withUrl: imageURLStr)
-        observer = fishImageView.observe(\.image, options: [.old, .new], changeHandler: {(imageView, _) in
-            XCTAssertNotNil(imageView.image)
-        })
-    }
     
     func testImageGalleryObjInModel() {
         let expectation = XCTestExpectation.init(description: "Fish Species Mock Service expectation")

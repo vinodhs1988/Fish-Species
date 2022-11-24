@@ -11,6 +11,10 @@ iOS 13
 ### Devices Supported
   iPhone
 
+### 3rd Party Dependency
+`https://github.com/SDWebImage/SDWebImage`
+This library provides an async image downloader with cache support. For convenience, we added categories for UI elements like `UIImageView`
+
 ### Concepts Covered 
 1. MVVM
 2. SOLID principles

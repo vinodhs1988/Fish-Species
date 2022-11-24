@@ -15,6 +15,11 @@ iOS 13
 `https://github.com/SDWebImage/SDWebImage`
 This library provides an async image downloader with cache support. For convenience, we added categories for UI elements like `UIImageView`
 
+To run this project you need to follow these steps:
+ 1. Need to install cocopods `https://cocoapods.org`
+ 2. Then open terminal and navigate to the folder `~/Fish-Species/FishSpecies` then use command `pod install`
+ 3. After pod installation open `~/Fish-Species/FishSpecies/FishSpecies.xcworkspace` in xcode, will be able to run the project 
+
 ### Concepts Covered 
 1. MVVM
 2. SOLID principles
@@ -32,5 +37,5 @@ This library provides an async image downloader with cache support. For convenie
 
 ### Upcoming improvements
  1. Snapshot for UI testing 
- 2. Creating seperate package/pof for maintaining UI components and networking
- 3. Maintain screen navigation in one place (coodinator pattern)
+ 2. Creating seperate package/pod for maintaining UI components and networking
+ 3. Maintain screen navigation in one place (coordinator pattern)

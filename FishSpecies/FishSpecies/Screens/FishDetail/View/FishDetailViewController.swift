@@ -29,7 +29,8 @@ class FishDetailViewController: BaseViewController {
     }
     
     private func loadPageData() {
-        if let imageUrlStr = self.viewModel?.detailPageViewModel?.imageUrlStr, !imageUrlStr.isEmpty {
+        guard let imageUrlStr = self.viewModel?.detailPageViewModel?.imageUrlStr else { return }
+        if !imageUrlStr.isEmpty {
             self.fishImageView.loadImageUsingCache(withUrl: imageUrlStr)
         }
         self.fishDetailTextView.attributedText = self.viewModel?.detailPageViewModel?.pageDescription.htmlToAttributedString
@@ -41,7 +42,7 @@ class FishDetailViewController: BaseViewController {
     }
     
     private func prepareNavigationBar() {
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: AppConstants.kEmptyStr, style: .plain, target: nil, action: nil)
         navigationItem.title = self.viewModel?.fishSpeciesDetail?.speciesName
     }
     

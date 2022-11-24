@@ -44,8 +44,8 @@ class FishListViewModel: NSObject {
     
     func createHomeModel(homeModel: FishElement) -> FishListCellViewModel {
         let name = homeModel.speciesName
-        let scientificName = homeModel.scientificName ?? ""
-        let imageUrlStr = homeModel.speciesIllustrationPhoto?.src ?? ""
+        let scientificName = homeModel.scientificName ?? AppConstants.kEmptyStr
+        let imageUrlStr = homeModel.speciesIllustrationPhoto?.src ?? AppConstants.kEmptyStr
         
         return FishListCellViewModel(name: name, scientificName: scientificName, imageUrlStr: imageUrlStr)
     }

@@ -13,7 +13,7 @@ protocol FishSpeciesServiceProtocol {
 
 class FishService: FishSpeciesServiceProtocol {
     func getFishSpecies(completion: @escaping (Bool, Fish?, String?) -> Void) {
-        HttpRequestHelper().GET(url: AppConstants.FishwatchEndPointURLString, params: ["": ""], httpHeader: .applicationJson) { success, data, err  in
+        HttpRequestHelper().GET(url: AppConstants.FishwatchEndPointURLString, params: [AppConstants.kEmptyStr: AppConstants.kEmptyStr], httpHeader: .applicationJson) { success, data, err  in
             if success {
                 do {
                     let model = try JSONDecoder().decode(Fish.self, from: data!)

@@ -39,6 +39,6 @@ class FishDetailViewModel: NSObject {
 }
 
 struct DetailPageViewModel {
-    var imageUrlStr: String = ""
-    var pageDescription: String = ""
+    var imageUrlStr: String = AppConstants.kEmptyStr
+    var pageDescription: String = AppConstants.kEmptyStr
 }

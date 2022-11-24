@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 struct AppConstants {
-    
     static let FishwatchEndPointURLString = "https://www.fishwatch.gov/api/species"
     static let placeholderImg =  UIImage(named: "placeholderImg")
     static let DetailPageSegueIdentifier = "moveToDetailPage"

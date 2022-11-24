@@ -30,7 +30,7 @@ class FishDetailViewController: BaseViewController {
     
     private func loadPageData() {
         if let imageUrlStr = self.viewModel?.detailPageViewModel?.imageUrlStr, !imageUrlStr.isEmpty {
-            self.fishImageView.sd_setImage(with: URL(string: imageUrlStr))
+            self.fishImageView.loadImageUsingCache(withUrl: imageUrlStr)
         }
         self.fishDetailTextView.attributedText = self.viewModel?.detailPageViewModel?.pageDescription.htmlToAttributedString
     }

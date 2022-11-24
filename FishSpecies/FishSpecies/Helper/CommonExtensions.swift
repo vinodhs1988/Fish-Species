@@ -7,6 +7,15 @@
 
 import Foundation
 import UIKit
+import SDWebImage
+
+extension UIImageView {
+    
+    func loadImageUsingCache(withUrl urlString: String) {
+        self.sd_setImage(with: URL(string: urlString))
+    }
+
+}
 
 extension UIViewController {
     func topMostViewController() -> UIViewController {
@@ -57,6 +66,7 @@ extension String {
             return nil
         }
     }
+    
     var htmlToString: String {
         return htmlToAttributedString?.string ?? ""
     }

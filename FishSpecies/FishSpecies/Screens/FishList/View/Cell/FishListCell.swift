@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 class FishListCell: UITableViewCell {
     
@@ -24,7 +23,7 @@ class FishListCell: UITableViewCell {
             nameLabel.text = cellViewModel?.name
             scientificNameLabel.text = cellViewModel?.scientificName
             if let imageUrlStr = cellViewModel?.imageUrlStr {
-                fishImageView.sd_setImage(with: URL(string: imageUrlStr))
+                fishImageView.loadImageUsingCache(withUrl: imageUrlStr)
             }
         }
     }

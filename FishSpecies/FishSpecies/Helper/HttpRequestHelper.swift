@@ -82,7 +82,7 @@ class HttpRequestHelper {
                 return
             }
             if let urlresponse = response as? HTTPURLResponse {
-                if (200 ..< 300) ~= urlresponse.statusCode   {
+                if (200 ..< 300) ~= urlresponse.statusCode {
                     complete(true, data, NetworkError.noError)
                 } else {
                     complete(false, nil, NetworkError.httpStatus(urlresponse.statusCode))

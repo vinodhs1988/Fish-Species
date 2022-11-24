@@ -44,6 +44,8 @@ class FishListCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        fishImageView.image = UIImage()
+        fishImageView.image = nil
         nameLabel.text = nil
         scientificNameLabel.text = nil
     }

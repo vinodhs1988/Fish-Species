@@ -112,7 +112,7 @@ class FishSpeciesTests: XCTestCase {
         XCTAssertNotNil(UIDevice.current.isJailBroken())
     }
     
-    func testAPIWorking() {
+    func testAPIWorking() async {
         let expectation = XCTestExpectation.init(description: "Fish Species Service expectation")
         let fishSpeciesService: FishSpeciesServiceProtocol = FishService()
         fishSpeciesService.getFishSpecies { success, results, error in

@@ -23,7 +23,6 @@ class FishListViewController: BaseViewController {
         
         Task.init(operation: {
             await fetchSpeciesDetailsAndLoadData()
-
         })
     }
     
@@ -66,12 +65,14 @@ extension FishListViewController {
     private func fetchSpeciesDetailsAndLoadData() async {
         await viewModel.getfishSpeciesDetails()
         
-        viewModel.reloadTableView = { [weak self] in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                Loader.hideProgressView()
-                self?.tableView.reloadData()
+        Task.init(operation: {
+            viewModel.reloadTableView = { [weak self] in
+                DispatchQueue.main.async {
+                    Loader.hideProgressView()
+                    self?.tableView.reloadData()
+                }
             }
-        }
+        })        
     }
 }
 extension FishListViewController: UITableViewDelegate {

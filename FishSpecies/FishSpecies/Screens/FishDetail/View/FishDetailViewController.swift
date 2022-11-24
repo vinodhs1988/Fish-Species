@@ -42,7 +42,8 @@ class FishDetailViewController: BaseViewController {
     }
     
     private func prepareNavigationBar() {
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: AppConstants.kEmptyStr, style: .plain, target: nil, action: nil)
+        let backbuttonItem = UIBarButtonItem(title: AppConstants.kEmptyStr, style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backbuttonItem
         navigationItem.title = self.viewModel?.fishSpeciesDetail?.speciesName
     }
     

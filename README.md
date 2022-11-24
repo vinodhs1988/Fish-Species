@@ -18,13 +18,19 @@ This library provides an async image downloader with cache support. For convenie
 To run this project you need to follow these steps:
  1. Need to install cocopods `https://cocoapods.org`
  2. Then open terminal and navigate to the folder `~/Fish-Species/FishSpecies` then use command `pod install`
+ 3. If any error comes
  3. After pod installation open `~/Fish-Species/FishSpecies/FishSpecies.xcworkspace` in xcode, will be able to run the project 
 
 ### Concepts Covered 
 1. MVVM
 2. SOLID principles
-3. Secutiy measures - Jail break detection
-  Jail break detection code added as a extension of `UIDevice`. To test the Jail break detection code go to `CommonExtensions.swift` file and `return TRUE` in that method. To test in simulator comment out the line `if UIDevice.current.isSimulator { return false }`. Now if you run the app, you will see alert without okay button.
+3. Secutiy measures 
+   - Jail break detection (  Jail break detection code added as extension of `UIDevice`)
+
+### Steps to Test Jail Break code 
+  1. Navigate to `CommonExtensions.swift` file and `return TRUE` in that method. 
+  2. To test in simulator comment out the line `if UIDevice.current.isSimulator { return false }`. 
+  3. Now run the app, you will see alert without okay button, user will be not be able to use the app.
   
  Logic used to detect device is JailBroken
  1. Jail broken app like Cydia app is installed in Device or not

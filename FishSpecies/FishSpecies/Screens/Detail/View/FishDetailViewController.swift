@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class FishDetailViewController: UIViewController {
 
@@ -28,7 +29,7 @@ class FishDetailViewController: UIViewController {
         fishImageView.backgroundColor = UIColor.white
 
         if let imageUrlStr = self.viewModel.detailPageViewModel?.imageUrlStr, !imageUrlStr.isEmpty {
-            self.fishImageView.loadImageUsingCache(withUrl: imageUrlStr)
+            self.fishImageView.sd_setImage(with: URL(string: imageUrlStr))
         } else {
             self.fishImageView.image = AppConstants.placeholderImg
         }

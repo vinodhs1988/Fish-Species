@@ -162,16 +162,18 @@ class FishSpeciesTests: XCTestCase {
     }
 
     func testImageDownloading() {
-        let fishImageView = UIImageView()
+        var fishImageView = UIImageView()
         let imageURLStr = "https://origin-east-01-drupal-fishwatch.woc.noaa.gov/sites/default/files/Pink_snapper_NB_W_0.png"
         fishImageView.loadImageUsingCache(withUrl: imageURLStr)
         observer = fishImageView.observe(\.image, options: [.old, .new], changeHandler: {(imageView, _) in
             XCTAssertNotNil(imageView.image)
         })
-
-        let fishImageViewOne = UIImageView()
-        fishImageViewOne.loadImageUsingCache(withUrl: imageURLStr)
-        XCTAssertEqual(fishImageView.image, fishImageViewOne.image)
+        
+        fishImageView = UIImageView()
+        fishImageView.loadImageUsingCache(withUrl: imageURLStr)
+        observer = fishImageView.observe(\.image, options: [.old, .new], changeHandler: {(imageView, _) in
+            XCTAssertNotNil(imageView.image)
+        })
     }
     
     func testImageGalleryObjInModel() {
@@ -200,5 +202,6 @@ class FishSpeciesTests: XCTestCase {
     func testAttriutedString() {
         let htmlText = "<a href=\"/species-aliases/opakapaka\" property=\"rdfs:label skos:prefLabel\" datatype=\"\">Opakapaka</a>"
         XCTAssertNotNil(htmlText.htmlToAttributedString)
+        XCTAssertNotNil(htmlText.htmlToString)
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0881063773374184298745EE /* Pods_FishSpeciesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E4C95912793F906F93A996 /* Pods_FishSpeciesTests.framework */; };
 		184FD396292E4B8800ADE941 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184FD395292E4B8800ADE941 /* ImageDownloader.swift */; };
 		18FEC4C4292C8A570074B5F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4C3292C8A570074B5F0 /* AppDelegate.swift */; };
 		18FEC4CB292C8A570074B5F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC4C9292C8A570074B5F0 /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 		18FEC51F292DD59D0074B5F0 /* MockServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC51E292DD59D0074B5F0 /* MockServiceTests.swift */; };
 		18FEC521292DD76E0074B5F0 /* UnitTestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC520292DD76E0074B5F0 /* UnitTestData.json */; };
 		18FEC52A292DE8870074B5F0 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC529292DE8870074B5F0 /* ActivityIndicatorView.swift */; };
+		3B4762B3872AFA7165AB5CDC /* Pods_FishSpecies_FishSpeciesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCF0DAF865E15179529D140 /* Pods_FishSpecies_FishSpeciesUITests.framework */; };
+		4C66CFB2F4A60767AC4AD94F /* Pods_FishSpecies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF3158FEBDE448F54DBDFE2 /* Pods_FishSpecies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045FD221A04B15577F604119 /* Pods-FishSpecies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishSpecies.debug.xcconfig"; path = "Target Support Files/Pods-FishSpecies/Pods-FishSpecies.debug.xcconfig"; sourceTree = "<group>"; };
+		08B997306A580AD5D502B2D4 /* Pods-FishSpeciesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishSpeciesTests.debug.xcconfig"; path = "Target Support Files/Pods-FishSpeciesTests/Pods-FishSpeciesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		184FD395292E4B8800ADE941 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		18FEC4C0292C8A570074B5F0 /* FishSpecies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishSpecies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FEC4C3292C8A570074B5F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +82,13 @@
 		18FEC51E292DD59D0074B5F0 /* MockServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceTests.swift; sourceTree = "<group>"; };
 		18FEC520292DD76E0074B5F0 /* UnitTestData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UnitTestData.json; sourceTree = "<group>"; };
 		18FEC529292DE8870074B5F0 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		2FCF0DAF865E15179529D140 /* Pods_FishSpecies_FishSpeciesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FishSpecies_FishSpeciesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C398F90A584CCAD25967DDC /* Pods-FishSpecies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishSpecies.release.xcconfig"; path = "Target Support Files/Pods-FishSpecies/Pods-FishSpecies.release.xcconfig"; sourceTree = "<group>"; };
+		6BF3158FEBDE448F54DBDFE2 /* Pods_FishSpecies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FishSpecies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A134C9CF0E51964E4F5F2B99 /* Pods-FishSpecies-FishSpeciesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishSpecies-FishSpeciesUITests.release.xcconfig"; path = "Target Support Files/Pods-FishSpecies-FishSpeciesUITests/Pods-FishSpecies-FishSpeciesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AFE79DADD575A1A45065C433 /* Pods-FishSpecies-FishSpeciesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishSpecies-FishSpeciesUITests.debug.xcconfig"; path = "Target Support Files/Pods-FishSpecies-FishSpeciesUITests/Pods-FishSpecies-FishSpeciesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDB7DE5A762BF7F241B1E15A /* Pods-FishSpeciesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishSpeciesTests.release.xcconfig"; path = "Target Support Files/Pods-FishSpeciesTests/Pods-FishSpeciesTests.release.xcconfig"; sourceTree = "<group>"; };
+		F3E4C95912793F906F93A996 /* Pods_FishSpeciesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FishSpeciesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C66CFB2F4A60767AC4AD94F /* Pods_FishSpecies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0881063773374184298745EE /* Pods_FishSpeciesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4762B3872AFA7165AB5CDC /* Pods_FishSpecies_FishSpeciesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +126,8 @@
 				18FEC4D9292C8A5A0074B5F0 /* FishSpeciesTests */,
 				18FEC4E3292C8A5A0074B5F0 /* FishSpeciesUITests */,
 				18FEC4C1292C8A570074B5F0 /* Products */,
+				4DC59A97E12CC929EE139C5A /* Pods */,
+				F5C09DA915E4B595A066A782 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,6 +274,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		4DC59A97E12CC929EE139C5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				045FD221A04B15577F604119 /* Pods-FishSpecies.debug.xcconfig */,
+				5C398F90A584CCAD25967DDC /* Pods-FishSpecies.release.xcconfig */,
+				AFE79DADD575A1A45065C433 /* Pods-FishSpecies-FishSpeciesUITests.debug.xcconfig */,
+				A134C9CF0E51964E4F5F2B99 /* Pods-FishSpecies-FishSpeciesUITests.release.xcconfig */,
+				08B997306A580AD5D502B2D4 /* Pods-FishSpeciesTests.debug.xcconfig */,
+				DDB7DE5A762BF7F241B1E15A /* Pods-FishSpeciesTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F5C09DA915E4B595A066A782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BF3158FEBDE448F54DBDFE2 /* Pods_FishSpecies.framework */,
+				2FCF0DAF865E15179529D140 /* Pods_FishSpecies_FishSpeciesUITests.framework */,
+				F3E4C95912793F906F93A996 /* Pods_FishSpeciesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,18 +305,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18FEC4EA292C8A5A0074B5F0 /* Build configuration list for PBXNativeTarget "FishSpecies" */;
 			buildPhases = (
+				9E36EB50C9AFDBAF0D6B9902 /* [CP] Check Pods Manifest.lock */,
 				18FEC4BC292C8A570074B5F0 /* Sources */,
 				18FEC4BD292C8A570074B5F0 /* Frameworks */,
 				18FEC4BE292C8A570074B5F0 /* Resources */,
 				184FD397292E709A00ADE941 /* ShellScript */,
+				0A3BE1AE6447EA64D26908A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FishSpecies;
-			packageProductDependencies = (
-			);
 			productName = FishSpecies;
 			productReference = 18FEC4C0292C8A570074B5F0 /* FishSpecies.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +325,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18FEC4ED292C8A5A0074B5F0 /* Build configuration list for PBXNativeTarget "FishSpeciesTests" */;
 			buildPhases = (
+				F057E8E599DE7D09C458DED5 /* [CP] Check Pods Manifest.lock */,
 				18FEC4D2292C8A5A0074B5F0 /* Sources */,
 				18FEC4D3292C8A5A0074B5F0 /* Frameworks */,
 				18FEC4D4292C8A5A0074B5F0 /* Resources */,
@@ -302,9 +344,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18FEC4F0292C8A5A0074B5F0 /* Build configuration list for PBXNativeTarget "FishSpeciesUITests" */;
 			buildPhases = (
+				59ABCB52E0C87768D078F79E /* [CP] Check Pods Manifest.lock */,
 				18FEC4DC292C8A5A0074B5F0 /* Sources */,
 				18FEC4DD292C8A5A0074B5F0 /* Frameworks */,
 				18FEC4DE292C8A5A0074B5F0 /* Resources */,
+				2D0E914F010287F8A07FAE88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,8 +392,6 @@
 				Base,
 			);
 			mainGroup = 18FEC4B7292C8A570074B5F0;
-			packageReferences = (
-			);
 			productRefGroup = 18FEC4C1292C8A570074B5F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -391,6 +433,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0A3BE1AE6447EA64D26908A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FishSpecies/Pods-FishSpecies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FishSpecies/Pods-FishSpecies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FishSpecies/Pods-FishSpecies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		184FD397292E709A00ADE941 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
@@ -407,6 +466,89 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		2D0E914F010287F8A07FAE88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FishSpecies-FishSpeciesUITests/Pods-FishSpecies-FishSpeciesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FishSpecies-FishSpeciesUITests/Pods-FishSpecies-FishSpeciesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FishSpecies-FishSpeciesUITests/Pods-FishSpecies-FishSpeciesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59ABCB52E0C87768D078F79E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FishSpecies-FishSpeciesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E36EB50C9AFDBAF0D6B9902 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FishSpecies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F057E8E599DE7D09C458DED5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FishSpeciesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -601,6 +743,7 @@
 		};
 		18FEC4EB292C8A5A0074B5F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 045FD221A04B15577F604119 /* Pods-FishSpecies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -629,6 +772,7 @@
 		};
 		18FEC4EC292C8A5A0074B5F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C398F90A584CCAD25967DDC /* Pods-FishSpecies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -657,6 +801,7 @@
 		};
 		18FEC4EE292C8A5A0074B5F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08B997306A580AD5D502B2D4 /* Pods-FishSpeciesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -676,6 +821,7 @@
 		};
 		18FEC4EF292C8A5A0074B5F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDB7DE5A762BF7F241B1E15A /* Pods-FishSpeciesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -695,6 +841,7 @@
 		};
 		18FEC4F1292C8A5A0074B5F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFE79DADD575A1A45065C433 /* Pods-FishSpecies-FishSpeciesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -712,6 +859,7 @@
 		};
 		18FEC4F2292C8A5A0074B5F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A134C9CF0E51964E4F5F2B99 /* Pods-FishSpecies-FishSpeciesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

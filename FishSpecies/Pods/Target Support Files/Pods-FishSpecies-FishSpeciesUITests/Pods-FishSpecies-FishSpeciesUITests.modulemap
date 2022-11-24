@@ -1,0 +1,6 @@
+framework module Pods_FishSpecies_FishSpeciesUITests {
+  umbrella header "Pods-FishSpecies-FishSpeciesUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

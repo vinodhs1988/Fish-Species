@@ -11,11 +11,7 @@ class FishDetailViewModel: NSObject {
     
     var updateDataSource: (() -> Void)?
     
-    var fishSpeciesDetail: FishElement? {
-        didSet {
-            createDetailPageModel()
-        }
-    }
+    var fishSpeciesDetail: FishDetailElementProtocol?
     
     var detailPageViewModel: DetailPageViewModel? {
         didSet {
@@ -23,8 +19,11 @@ class FishDetailViewModel: NSObject {
         }
     }
     
-    override init() { }
-    
+    init(detailElement: FishDetailElementProtocol = FishDetailElement()) {
+        super.init()
+        self.fishSpeciesDetail = detailElement
+        self.createDetailPageModel()
+    }
     func createDetailPageModel() {
         let imageUrlStr = fishSpeciesDetail?.speciesIllustrationPhoto?.src ?? AppConstants.kEmptyStr
         let pageDescriptionArr: [String] = [(fishSpeciesDetail?.speciesName ?? AppConstants.kEmptyStr),

@@ -29,7 +29,14 @@ class FishListViewController: UIViewController {
         if segue.identifier ==  AppConstants.DetailPageSegueIdentifier {
             let destVC = segue.destination as? FishDetailViewController
             let fishSpeciesDetail = viewModel.getFishSpecies(at: self.tableView.indexPathForSelectedRow ?? IndexPath(row: 0, section: 0))
-            destVC?.viewModel.fishSpeciesDetail = fishSpeciesDetail
+            let detailElement = FishDetailElement(speciesIllustrationPhoto: fishSpeciesDetail.speciesIllustrationPhoto,
+                                                  scientificName: fishSpeciesDetail.scientificName,
+                                                  speciesName: fishSpeciesDetail.speciesName,
+                                                  harvest: fishSpeciesDetail.harvest,
+                                                  population: fishSpeciesDetail.population,
+                                                  populationStatus: fishSpeciesDetail.populationStatus,
+                                                  physicalDescription: fishSpeciesDetail.physicalDescription)
+            destVC?.viewModel = FishDetailViewModel(detailElement: detailElement)
         }
     }
 }

@@ -17,4 +17,14 @@ struct AppConstants {
     static let kEmptyStr = ""
     static let doubleHTMLBreak = "<br/><br/>"
     static let downloadingStr =  "Downloading Data..."
+    static let JailBrokenDeviceAlertTitle = "System Requirements"
+}
+
+class CommonUtils {
+    
+    class func showAlert(alertTitle: String, message: String) {
+        let alertStyle = UIAlertController.Style.alert
+        let alert = UIAlertController(title: alertTitle, message: message, preferredStyle: alertStyle)
+        UIApplication.shared.topMostViewController()?.present(alert, animated: true)
+    }
 }

@@ -12,19 +12,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+        window = UIWindow(frame: UIScreen.main.bounds)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let navigationController = storyboard.instantiateViewController(withIdentifier: "FishListHome") as? UINavigationController
         window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
+        window?.makeKeyAndVisible()
         
         if UIDevice.current.isJailBroken() {
-            // move alert to common class
-            let alertStyle = UIAlertController.Style.alert
-            let alertTitle = "System Requirements"
-            let alert = UIAlertController(title: alertTitle, message: AppConstants.JailBrokenDeviceAlertMessage, preferredStyle: alertStyle)
-            navigationController?.present(alert, animated: true, completion: nil)
+            CommonUtils.showAlert(alertTitle: AppConstants.JailBrokenDeviceAlertTitle, message: AppConstants.JailBrokenDeviceAlertMessage)
         }
         
         return true

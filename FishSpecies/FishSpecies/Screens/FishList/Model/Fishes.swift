@@ -9,38 +9,83 @@ import Foundation
 
 typealias Fish = [FishElement]
 
+protocol FishDetailElementProtocol {
+    var speciesIllustrationPhoto: SpeciesIllustrationPhoto? { get }
+    var scientificName: String? { get }
+    var speciesName: String? { get }
+    var harvest: String? { get }
+    var population: String? { get }
+    var populationStatus: String? { get }
+    var physicalDescription: String? { get }
+
+}
+
+struct FishDetailElement: FishDetailElementProtocol {
+    var speciesIllustrationPhoto: SpeciesIllustrationPhoto?
+    var scientificName: String?
+    var speciesName: String?
+    var harvest: String?
+    var population: String?
+    var populationStatus: String?
+    var physicalDescription: String?
+}
+
 // MARK: - FishElement
 struct FishElement: Decodable {
-    let fisheryManagement, habitat, habitatImpacts: String?
+    
+    let fisheryManagement: String?
+    let habitat: String?
+    let habitatImpacts: String?
     let imageGallery: ImageGallery?
-    let location, management: String?
+    let location: String?
+    let management: String?
     let noaaFisheriesRegion: String?
-    let population, populationStatus: String?
-    let scientificName, speciesAliases: String
+    let population: String?
+    let populationStatus: String?
+    let scientificName: String?
+    let speciesAliases: String
     let speciesIllustrationPhoto: SpeciesIllustrationPhoto?
     let speciesName: String
     let animalHealth: String?
-    let availability, biology: String
-    let bycatch, calories, carbohydrate, cholesterol: String?
+    let availability: String
+    let biology: String
+    let bycatch: String?
+    let calories: String?
+    let carbohydrate: String?
+    let cholesterol: String?
     let color: String?
     let diseaseTreatmentAndPrevention: String?
     let diseasesInSalmon: String?
     let displayedSeafoodProfileIllustration: String?
-    let ecosystemServices, environmentalConsiderations, environmentalEffects, farmingMethods: String?
-    let fishFarmingMethods, fatTotal, fishFeeds, feeds: String?
-    let fiberTotalDietary, fishingRate, harvest: String?
+    let ecosystemServices: String?
+    let environmentalConsiderations: String?
+    let environmentalEffects: String?
+    let farmingMethods: String?
+    let fishFarmingMethods: String?
+    let fatTotal: String?
+    let fishFeeds: String?
+    let feeds: String?
+    let fiberTotalDietary: String?
+    let fishingRate: String?
+    let harvest: String?
     let harvestType: String?
-    let healthBenefits, fishHumanHealth, humanHealth: String?
+    let healthBenefits: String?
+    let fishHumanHealth: String?
+    let humanHealth: String?
     let physicalDescription: String
     let production, protein: String?
     let quote, quoteBackgroundColor: String
-    let research, saturatedFattyAcidsTotal, selenium: String?
+    let research: String?
+    let saturatedFattyAcidsTotal: String?
+    let selenium: String?
     let servingWeight: String?
     let servings, sodium: String?
     let source: String
-    let sugarsTotal, taste, texture: String?
+    let sugarsTotal: String?
+    let taste: String?
+    let texture: String?
     let path, lastUpdate: String
-
+    
     enum CodingKeys: String, CodingKey {
         case fisheryManagement = "Fishery Management"
         case habitat = "Habitat"

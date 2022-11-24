@@ -19,7 +19,7 @@ class FishListCell: UITableViewCell {
             nameLabel.text = cellViewModel?.name
             scientificNameLabel.text = cellViewModel?.scientificName
             if let imageUrlStr = cellViewModel?.imageUrlStr {
-                self.fishImageView.sd_setImage(with: URL(string: imageUrlStr))
+                fishImageView.sd_setImage(with: URL(string: imageUrlStr))
             }
         }
     }

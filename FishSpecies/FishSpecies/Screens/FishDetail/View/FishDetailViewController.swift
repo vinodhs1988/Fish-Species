@@ -10,29 +10,35 @@ import UIKit
 import SDWebImage
 
 class FishDetailViewController: UIViewController {
-
-    lazy var viewModel = {
-        FishDetailViewModel()
-    }()
-
+    
+    var viewModel: FishDetailViewModel?
+    
     @IBOutlet private var fishDetailTextView: UITextView!
     @IBOutlet private var fishImageView: UIImageView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareNavigationBar()
+        setupImageView()
         
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
-        self.navigationItem.title = self.viewModel.fishSpeciesDetail?.speciesName
-
+        loadPageData()
+    }
+    
+    private func loadPageData() {
+        if let imageUrlStr = self.viewModel?.detailPageViewModel?.imageUrlStr, !imageUrlStr.isEmpty {
+            self.fishImageView.sd_setImage(with: URL(string: imageUrlStr))
+        }
+        self.fishDetailTextView.attributedText = self.viewModel?.detailPageViewModel?.pageDescription.htmlToAttributedString
+    }
+    
+    private func setupImageView() {
         fishImageView.layer.cornerRadius = 20.0
         fishImageView.backgroundColor = UIColor.white
-
-        if let imageUrlStr = self.viewModel.detailPageViewModel?.imageUrlStr, !imageUrlStr.isEmpty {
-            self.fishImageView.sd_setImage(with: URL(string: imageUrlStr))
-        } else {
-            self.fishImageView.image = AppConstants.placeholderImg
-        }
-        self.fishDetailTextView.attributedText = self.viewModel.detailPageViewModel?.pageDescription.htmlToAttributedString
     }
+    
+    private func prepareNavigationBar() {
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.title = self.viewModel?.fishSpeciesDetail?.speciesName
+    }
+    
 }

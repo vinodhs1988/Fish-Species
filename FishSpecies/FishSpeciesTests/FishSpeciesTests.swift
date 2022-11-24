@@ -144,7 +144,6 @@ class FishSpeciesTests: XCTestCase {
             }
             if success, let fishSpecies = results {
                 if !fishSpecies.isEmpty {
-                    self.fishSpeciesDetail = fishSpecies.first
                     expectation.fulfill()
                 }
             } else {

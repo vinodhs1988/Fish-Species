@@ -5,7 +5,7 @@ This project was developed in MVVM architecture
 This project loads the data from the API `https://www.fishwatch.gov/api/species`
 
 ### Xcode version used
-XCodoe 13.4.1
+XCode 13.4.1
 
 ### Minimum iOS version Supported
 

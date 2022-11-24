@@ -24,6 +24,7 @@ class FishDetailViewModel: NSObject {
         self.fishSpeciesDetail = detailElement
         self.createDetailPageModel()
     }
+    
     func createDetailPageModel() {
         let imageUrlStr = fishSpeciesDetail?.speciesIllustrationPhoto?.src ?? AppConstants.kEmptyStr
         let pageDescriptionArr: [String] = [(fishSpeciesDetail?.speciesName ?? AppConstants.kEmptyStr),

@@ -18,6 +18,8 @@ struct AppConstants {
     static let doubleHTMLBreak = "<br/><br/>"
     static let downloadingStr =  "Downloading Data..."
     static let JailBrokenDeviceAlertTitle = "System Requirements"
+    static let MainSB = "Main"
+    static let HomeNavPageIdentifier = "FishListHome"
 }
 
 class CommonUtils {

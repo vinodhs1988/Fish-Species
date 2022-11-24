@@ -17,7 +17,7 @@ protocol FishDetailElementProtocol {
     var population: String? { get }
     var populationStatus: String? { get }
     var physicalDescription: String? { get }
-
+    
 }
 
 struct FishDetailElement: FishDetailElementProtocol {

@@ -36,8 +36,8 @@ class FishDetailViewController: BaseViewController {
     }
     
     private func setupImageView() {
-        fishImageView.layer.cornerRadius = 20.0
-        fishImageView.backgroundColor = UIColor.white
+        fishImageView.layer.cornerRadius = Constants.imageCornerRadius
+        fishImageView.backgroundColor = Constants.whiteColor
     }
     
     private func prepareNavigationBar() {

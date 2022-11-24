@@ -190,7 +190,4 @@ class FishSpeciesTests: XCTestCase {
         XCTAssertNotNil(UIApplication.shared.topMostViewController())
     }
     
-    func testAsyncAswait() {
-        
-    }
 }

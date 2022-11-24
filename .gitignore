@@ -13,12 +13,11 @@
 *.pbxuser
 
 # Xcode
-xcuserdata/
-project.xcworkspace/
-DerivedData/
+FishSpecies/xcuserdata/
+FishSpecies/DerivedData/
 
 # build products
-build/
+FishSpecies/build/
 *.[oa]
 
 # repositories

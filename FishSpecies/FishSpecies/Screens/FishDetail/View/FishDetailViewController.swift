@@ -21,8 +21,7 @@ class FishDetailViewController: BaseViewController {
     @IBOutlet private var fishDetailTextView: UITextView!
     @IBOutlet private var fishImageView: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func prepareView() {
         prepareNavigationBar()
         setupImageView()
         

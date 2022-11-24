@@ -16,8 +16,7 @@ class FishListViewController: BaseViewController {
         FishListViewModel()
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func prepareView() {
         setupTableView()
         registerNib()
         showLoader()

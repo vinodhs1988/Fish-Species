@@ -10,4 +10,12 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        prepareView()
+    }
+    
+    func prepareView() {
+        
+    }
 }

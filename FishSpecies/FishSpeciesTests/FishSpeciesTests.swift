@@ -171,7 +171,6 @@ class FishSpeciesTests: XCTestCase {
                     if let firstObjectNotNil =  firstObject, !firstObjectNotNil.isEmpty {
                         expectation.fulfill()
                     }
-                    expectation.fulfill()
                 }
             } else {
                 expectation.fulfill()
@@ -191,4 +190,7 @@ class FishSpeciesTests: XCTestCase {
         XCTAssertNotNil(UIApplication.shared.topMostViewController())
     }
     
+    func testAsyncAswait() {
+        
+    }
 }

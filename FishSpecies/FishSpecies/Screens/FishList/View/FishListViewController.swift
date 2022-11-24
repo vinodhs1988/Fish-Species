@@ -21,7 +21,10 @@ class FishListViewController: BaseViewController {
         registerNib()
         showLoader()
         
-        fetchSpeciesDetailsAndLoadData()
+        Task.init(operation: {
+            await fetchSpeciesDetailsAndLoadData()
+
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -60,8 +63,8 @@ extension FishListViewController {
         tableView.register(FishListCell.nib, forCellReuseIdentifier: FishListCell.identifier)
     }
     
-    private func fetchSpeciesDetailsAndLoadData() {
-        viewModel.getfishSpeciesDetails()
+    private func fetchSpeciesDetailsAndLoadData() async {
+        await viewModel.getfishSpeciesDetails()
         
         viewModel.reloadTableView = { [weak self] in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {

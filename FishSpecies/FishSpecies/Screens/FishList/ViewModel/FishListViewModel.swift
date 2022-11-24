@@ -25,7 +25,7 @@ class FishListViewModel: NSObject {
         self.fishSpeciesService = fishSpeciesService
     }
     
-    func getfishSpeciesDetails() {
+    func getfishSpeciesDetails() async {
         fishSpeciesService.getFishSpecies { success, results, _ in
             if success, let fishSpecies = results {
                 self.fetchData(fishSpecies: fishSpecies)

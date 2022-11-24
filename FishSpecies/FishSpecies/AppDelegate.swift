@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = storyboard.instantiateViewController(withIdentifier: "FishListHome") as? UINavigationController
         window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
+        
         if UIDevice.current.isJailBroken() {
             let alertStyle = UIAlertController.Style.alert
             let alertTitle = "System Requirements"

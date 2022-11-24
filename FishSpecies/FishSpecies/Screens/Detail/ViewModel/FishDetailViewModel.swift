@@ -13,7 +13,7 @@ class FishDetailViewModel: NSObject {
     
     var fishSpeciesDetail: FishElement? {
         didSet {
-            self.createDetailPageModel()
+            createDetailPageModel()
         }
     }
     

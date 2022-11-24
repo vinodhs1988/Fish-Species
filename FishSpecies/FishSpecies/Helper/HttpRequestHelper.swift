@@ -43,6 +43,11 @@ enum NetworkError: Error, LocalizedError {
 typealias Completion = (Bool, Data?, NetworkError?) -> Void
 
 class HttpRequestHelper {
+    private enum Constants {
+        static let contentType = "Content-Type"
+        static let applicationJson = "application/json"
+        static let applicationXWWWFormUrlencoded = "application/x-www-form-urlencoded"
+    }
     func GET(url: String, params: [String: String], httpHeader: HTTPHeaderFields, complete: @escaping Completion) {
         guard var components = URLComponents(string: url) else {
             return
@@ -59,9 +64,9 @@ class HttpRequestHelper {
         
         switch httpHeader {
         case .applicationJson:
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue(Constants.applicationJson, forHTTPHeaderField: Constants.contentType)
         case .applicationXWWWFormUrlencoded:
-            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            request.setValue(Constants.applicationXWWWFormUrlencoded, forHTTPHeaderField: Constants.contentType)
         case .none: break
         }
         
@@ -76,8 +81,8 @@ class HttpRequestHelper {
                 complete(false, nil, NetworkError.genericError)
                 return
             }
-            if let urlresponse = response as? HTTPURLResponse, (200 ..< 300) ~= urlresponse.statusCode {
-                if urlresponse.statusCode == 200 {
+            if let urlresponse = response as? HTTPURLResponse {
+                if (200 ..< 300) ~= urlresponse.statusCode   {
                     complete(true, data, NetworkError.noError)
                 } else {
                     complete(false, nil, NetworkError.httpStatus(urlresponse.statusCode))

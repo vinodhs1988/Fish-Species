@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fish Species-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FishListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FishListViewController" customModule="FishSpecies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aUk-3d-xOF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aUk-3d-xOF" secondAttribute="trailing" id="H5T-ra-Arl"/>
+                            <constraint firstItem="aUk-3d-xOF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="88" id="Rlh-LP-9z0"/>
+                            <constraint firstItem="aUk-3d-xOF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tuy-Rv-Imi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aUk-3d-xOF" secondAttribute="bottom" id="uHp-D2-lOb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fish Species" id="LkZ-Zm-pzb"/>
+                    <connections>
+                        <outlet property="tableView" destination="aUk-3d-xOF" id="4OO-Px-EsF"/>
+                        <segue destination="LEp-cp-rmh" kind="show" identifier="moveToDetailPage" id="kva-Fe-Gb3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="108.48214285714285"/>
+        </scene>
+        <!--Fish Detail View Controller-->
+        <scene sceneID="V84-wc-Veq">
+            <objects>
+                <viewController storyboardIdentifier="FishDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LEp-cp-rmh" customClass="FishDetailViewController" customModule="FishSpecies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cjO-Rv-Qev">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="upH-8Q-TSI">
+                                <rect key="frame" x="20" y="108" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="S2e-R2-Hys"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cn3-gl-34M">
+                                <rect key="frame" x="20" y="328" width="374" height="514"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q2B-qw-dt7"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="q2B-qw-dt7" firstAttribute="trailing" secondItem="cn3-gl-34M" secondAttribute="trailing" constant="20" id="2A7-6p-1AO"/>
+                            <constraint firstItem="cn3-gl-34M" firstAttribute="top" secondItem="upH-8Q-TSI" secondAttribute="bottom" constant="20" id="6gi-DM-XdC"/>
+                            <constraint firstItem="q2B-qw-dt7" firstAttribute="trailing" secondItem="upH-8Q-TSI" secondAttribute="trailing" constant="20" id="Dho-L3-bxz"/>
+                            <constraint firstItem="q2B-qw-dt7" firstAttribute="bottom" secondItem="cn3-gl-34M" secondAttribute="bottom" constant="20" id="HYz-hW-YRa"/>
+                            <constraint firstItem="upH-8Q-TSI" firstAttribute="top" secondItem="q2B-qw-dt7" secondAttribute="top" constant="20" id="Q2z-Za-dj1"/>
+                            <constraint firstItem="cn3-gl-34M" firstAttribute="leading" secondItem="q2B-qw-dt7" secondAttribute="leading" constant="20" id="Ref-pv-bzV"/>
+                            <constraint firstItem="upH-8Q-TSI" firstAttribute="leading" secondItem="q2B-qw-dt7" secondAttribute="leading" constant="20" id="Whr-eW-geV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vfB-ZH-dpi"/>
+                    <connections>
+                        <outlet property="fishDetailTextView" destination="cn3-gl-34M" id="gUL-V0-LAv"/>
+                        <outlet property="fishImageView" destination="upH-8Q-TSI" id="Gx2-a9-vAy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HcR-3Y-duS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W5x-K4-dR7">
+            <objects>
+                <navigationController storyboardIdentifier="FishListHome" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9bP-rH-fj3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6hn-zJ-pFG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xZR-vs-NUA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0NK-Ek-w9A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

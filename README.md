@@ -35,7 +35,7 @@ To run this project you need to follow these steps:
   2. To test in simulator comment out the line `if UIDevice.current.isSimulator { return false }`. 
   3. Now run the app, you will see alert without okay button, user will be not be able to use the app.
   
- Logic used to detect device is JailBroken
+### Logic used to detect device is JailBroken
  1. Jail broken app like Cydia app is installed in Device or not
  2. Able to open/write system related file or not
 

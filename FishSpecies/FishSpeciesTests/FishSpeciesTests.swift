@@ -105,9 +105,7 @@ class FishSpeciesTests: XCTestCase {
     }
     
     func testDetailPageDataLoading() {
-        let fishSpeciesDetail = listVC.viewModel.getFishSpecies(at: IndexPath(row: 0, section: 0))
-        detailVC.viewModel.fishSpeciesDetail = fishSpeciesDetail
-        XCTAssertEqual(detailVC.viewModel.detailPageViewModel?.imageUrlStr, fishSpeciesDetail.speciesIllustrationPhoto?.src)
+        listVC.tableView(listVC.tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
     }
     
     func testDeviceIsJailBroken() {
@@ -186,4 +184,10 @@ class FishSpeciesTests: XCTestCase {
         XCTAssertNotNil(htmlText.htmlToAttributedString)
         XCTAssertNotNil(htmlText.htmlToString)
     }
+    
+    func testCommonUtils() {
+        CommonUtils.showAlert(alertTitle: "Alert title", message: "Alert message")
+        XCTAssertNotNil(UIApplication.shared.topMostViewController())
+    }
+    
 }

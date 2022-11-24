@@ -36,11 +36,7 @@ private class ActivityIndicatorView {
         self.view.addSubview(self.activityIndicator)
         self.view.addSubview(titleLabel)
     }
-    
-    private func getViewActivityIndicator() -> UIView {
-        return self.view
-    }
-    
+        
     func startAnimating() {
         self.activityIndicator.startAnimating()
         self.view.isUserInteractionEnabled = false

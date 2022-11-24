@@ -27,6 +27,7 @@ class FishListCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
+        setupImageView()
     }
     
     private func setupView() {

@@ -144,6 +144,7 @@ class FishSpeciesTests: XCTestCase {
             }
             if success, let fishSpecies = results {
                 if !fishSpecies.isEmpty {
+                    self.fishSpeciesDetail = fishSpecies.first
                     expectation.fulfill()
                 }
             } else {
@@ -154,6 +155,7 @@ class FishSpeciesTests: XCTestCase {
     }
     
     func testJailBrokenHelper() {
+        XCTAssertNotNil(UIDevice.current.isJailBroken())
         XCTAssertNotNil(JailBrokenHelper.hasCydiaInstalled())
         XCTAssertNotNil(JailBrokenHelper.isContainsSuspiciousApps())
         XCTAssertNotNil(JailBrokenHelper.isSuspiciousSystemPathsExists())
@@ -184,8 +186,6 @@ class FishSpeciesTests: XCTestCase {
                 if !fishSpecies.isEmpty {
                     let firstObject = fishSpecies.first?.imageGallery?.values
                     if let firstObjectNotNil =  firstObject, !firstObjectNotNil.isEmpty {
-                        self.detailViewModel.fishSpeciesDetail = fishSpecies.first
-                        self.detailViewModel.createDetailPageModel()
                         expectation.fulfill()
                     }
                     expectation.fulfill()
@@ -196,5 +196,10 @@ class FishSpeciesTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 10.0)
 
+    }
+    
+    func testAttriutedString() {
+        let htmlText = "<a href=\"/species-aliases/opakapaka\" property=\"rdfs:label skos:prefLabel\" datatype=\"\">Opakapaka</a>"
+        XCTAssertNotNil(htmlText.htmlToAttributedString)
     }
 }

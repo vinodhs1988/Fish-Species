@@ -29,3 +29,8 @@ This library provides an async image downloader with cache support. For convenie
 ### System Requirement
  1. mac OS Monterey
  2. XCode 13
+
+### Upcoming improvements
+ 1. Snapshot for UI testing 
+ 2. Creating seperate package/pof for maintaining UI components and networking
+ 3. Maintain screen navigation in one place (coodinator pattern)

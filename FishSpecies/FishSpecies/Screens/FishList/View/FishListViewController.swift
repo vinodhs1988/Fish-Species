@@ -20,9 +20,13 @@ class FishListViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         registerNib()
-        Loader.showProgressView(title: AppConstants.downloadingStr, context: self.view)
-
+        showLoader()
+        
         fetchSpeciesDetailsAndLoadData()
+    }
+    
+    private func showLoader() {
+        Loader.showProgressView(title: AppConstants.downloadingStr, context: self.view)
     }
     
     private func setupTableView() {
@@ -41,9 +45,9 @@ class FishListViewController: UIViewController {
     
     private func fetchSpeciesDetailsAndLoadData() {
         viewModel.getfishSpeciesDetails()
-        
+    
         viewModel.reloadTableView = { [weak self] in
-            DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 Loader.hideProgressView()
                 self?.tableView.reloadData()
             }

@@ -18,7 +18,7 @@ This library provides an async image downloader with cache support. For convenie
 To run this project you need to follow these steps:
  1. Need to install cocopods `https://cocoapods.org`
  2. Then open terminal and navigate to the folder `~/Fish-Species/FishSpecies` then use command `pod install`
- 3. If any error comes
+ 3. If any error occured during installation use command `pod install --repo-udpate`
  3. After pod installation open `~/Fish-Species/FishSpecies/FishSpecies.xcworkspace` in xcode, will be able to run the project 
 
 ### Concepts Covered 

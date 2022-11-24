@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-class FishListViewController: UIViewController {
+class FishListViewController: BaseViewController {
     
     @IBOutlet var tableView: UITableView!
     
     lazy var viewModel = {
         FishListViewModel()
     }()
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -24,7 +24,7 @@ class FishListViewController: UIViewController {
         
         fetchSpeciesDetailsAndLoadData()
     }
-        
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier ==  AppConstants.DetailPageSegueIdentifier {
             let destVC = segue.destination as? FishDetailViewController
@@ -63,7 +63,7 @@ extension FishListViewController {
     
     private func fetchSpeciesDetailsAndLoadData() {
         viewModel.getfishSpeciesDetails()
-    
+        
         viewModel.reloadTableView = { [weak self] in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 Loader.hideProgressView()
@@ -85,15 +85,15 @@ extension FishListViewController: UITableViewDelegate {
 
 extension FishListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getNumberofRows()
+        return viewModel.getNumberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: FishListCell.identifier, for: indexPath) as? FishListCell {
-            let cellVM = viewModel.getCellViewModel(at: indexPath)
-            cell.cellViewModel = cellVM
-            return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FishListCell.identifier, for: indexPath) as? FishListCell else {
+            return UITableViewCell()
         }
-        return UITableViewCell()
+        let cellVM = viewModel.getCellViewModel(at: indexPath)
+        cell.cellViewModel = cellVM
+        return cell
     }
 }

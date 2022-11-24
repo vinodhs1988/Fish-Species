@@ -47,12 +47,12 @@ class FishSpeciesTests: XCTestCase {
     }
     
     func testNumberofRows() {
-        XCTAssertTrue(self.listVC.viewModel.getNumberofRows() > 0)
+        XCTAssertTrue(self.listVC.viewModel.getNumberOfRows() > 0)
     }
     
     func testNumberOfRows() {
         let numberOfRows = listVC.tableView(listVC.tableView, numberOfRowsInSection: 0)
-        XCTAssertEqual(numberOfRows, listVC.viewModel.getNumberofRows(), "Number of rows in table should match")
+        XCTAssertEqual(numberOfRows, listVC.viewModel.getNumberOfRows(), "Number of rows in table should match")
     }
     
     func testTableViewHasCells() {
@@ -118,6 +118,7 @@ class FishSpeciesTests: XCTestCase {
         fishSpeciesService.getFishSpecies { success, results, error in
             if error != nil {
                 XCTFail("Fail")
+                XCTAssertNotNil(error)
             }
             if success, let fishSpecies = results {
                 if !fishSpecies.isEmpty {
@@ -136,6 +137,7 @@ class FishSpeciesTests: XCTestCase {
         fishSpeciesService.getFishSpecies { success, results, error in
             if error != nil {
                 XCTFail("Fail")
+                expectation.fulfill()
             }
             if success, let fishSpecies = results {
                 if !fishSpecies.isEmpty {

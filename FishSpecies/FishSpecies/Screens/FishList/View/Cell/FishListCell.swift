@@ -10,6 +10,11 @@ import SDWebImage
 
 class FishListCell: UITableViewCell {
     
+    private enum Constants {
+        static let imageCornerRadius: CGFloat = 10.0
+        static let whiteColor = UIColor.white
+    }
+    
     @IBOutlet private var nameLabel: UILabel!
     @IBOutlet private var scientificNameLabel: UILabel!
     @IBOutlet private var fishImageView: UIImageView!
@@ -38,8 +43,8 @@ class FishListCell: UITableViewCell {
     }
     
     private func setupImageView() {
-        fishImageView.layer.cornerRadius = 10
-        fishImageView.backgroundColor = UIColor.white
+        fishImageView.layer.cornerRadius = Constants.imageCornerRadius
+        fishImageView.backgroundColor = Constants.whiteColor
     }
     
     override func prepareForReuse() {

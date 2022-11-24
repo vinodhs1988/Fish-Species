@@ -50,7 +50,7 @@ class FishListViewModel: NSObject {
         return FishListCellViewModel(name: name, scientificName: scientificName, imageUrlStr: imageUrlStr)
     }
     
-    func getNumberofRows() -> Int {
+    func getNumberOfRows() -> Int {
         return homeCellViewModels.count
     }
     

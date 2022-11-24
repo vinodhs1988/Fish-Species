@@ -9,7 +9,12 @@ import Foundation
 import UIKit
 import SDWebImage
 
-class FishDetailViewController: UIViewController {
+class FishDetailViewController: BaseViewController {
+    
+    private enum Constants {
+        static let imageCornerRadius: CGFloat = 20.0
+        static let whiteColor = UIColor.white
+    }
     
     var viewModel: FishDetailViewModel?
     

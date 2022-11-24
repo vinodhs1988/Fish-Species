@@ -17,7 +17,7 @@ class FishService: FishSpeciesServiceProtocol {
             if success {
                 do {
                     let model = try JSONDecoder().decode(Fish.self, from: data!)
-                    completion(true, model, nil)
+                    completion(true, model, err?.errorDescription)
                 } catch {
                     completion(false, nil, "Error: \(err?.errorDescription ?? AppConstants.kEmptyStr)")
                 }

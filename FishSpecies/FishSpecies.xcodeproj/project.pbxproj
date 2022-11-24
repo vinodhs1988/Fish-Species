@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0881063773374184298745EE /* Pods_FishSpeciesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E4C95912793F906F93A996 /* Pods_FishSpeciesTests.framework */; };
+		186CD4DD292FA1E10008C002 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186CD4DC292FA1E10008C002 /* BaseViewController.swift */; };
 		18FEC4C4292C8A570074B5F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC4C3292C8A570074B5F0 /* AppDelegate.swift */; };
 		18FEC4CB292C8A570074B5F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC4C9292C8A570074B5F0 /* Main.storyboard */; };
 		18FEC4CD292C8A5A0074B5F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FEC4CC292C8A5A0074B5F0 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		045FD221A04B15577F604119 /* Pods-FishSpecies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishSpecies.debug.xcconfig"; path = "Target Support Files/Pods-FishSpecies/Pods-FishSpecies.debug.xcconfig"; sourceTree = "<group>"; };
 		08B997306A580AD5D502B2D4 /* Pods-FishSpeciesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishSpeciesTests.debug.xcconfig"; path = "Target Support Files/Pods-FishSpeciesTests/Pods-FishSpeciesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		186CD4DC292FA1E10008C002 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		18FEC4C0292C8A570074B5F0 /* FishSpecies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishSpecies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FEC4C3292C8A570074B5F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FEC4CA292C8A570074B5F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		18FEC4F9292C9B130074B5F0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				186CD4DC292FA1E10008C002 /* BaseViewController.swift */,
 				18FEC508292CAED70074B5F0 /* FishList */,
 				18FEC509292CAEE40074B5F0 /* FishDetail */,
 			);
@@ -558,6 +561,7 @@
 				18FEC506292C9DCB0074B5F0 /* AppConstants.swift in Sources */,
 				18FEC4C4292C8A570074B5F0 /* AppDelegate.swift in Sources */,
 				18FEC4F8292C9AE30074B5F0 /* FishesService.swift in Sources */,
+				186CD4DD292FA1E10008C002 /* BaseViewController.swift in Sources */,
 				18FEC50E292CB3B90074B5F0 /* FishListCell.swift in Sources */,
 				18FEC504292C9BB40074B5F0 /* FishListViewModel.swift in Sources */,
 				18FEC502292C9B910074B5F0 /* Fishes.swift in Sources */,

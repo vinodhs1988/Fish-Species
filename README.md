@@ -48,3 +48,4 @@ To run this project you need to follow these steps:
  1. Snapshot for UI testing 
  2. Creating seperate package/pod for maintaining UI components and networking
  3. Maintain screen navigation in one place (coordinator pattern)
+ 4. Async/await or PromiseKit for handling structured async operation  

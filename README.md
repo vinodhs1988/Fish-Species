@@ -52,22 +52,28 @@ To run this project you need to follow these steps:
 
 ### Screenshots
 
-  ## Test Case Execution
+  1. Test Case Execution
   
 <img width="268" alt="Screenshot 2022-12-05 at 4 23 21 PM" src="https://user-images.githubusercontent.com/108928613/205621785-670f6880-30d0-4f48-af71-2e68d37be367.png">
 
-  ## Test Case Coverage
+  2. Test Case Coverage
 
 <img width="982" alt="Screenshot 2022-12-05 at 4 23 50 PM" src="https://user-images.githubusercontent.com/108928613/205621951-bd440cf1-1e6b-4020-8231-f4db0c20731d.png">
 
 
-  ## App Landing Screen
+  3. App Landing Screen
   
-  ![Simulator Screen Shot - iPhone 8 - 2022-12-05 at 16 24 12](https://user-images.githubusercontent.com/108928613/205622086-96dfb3c5-21f9-48ff-b931-37b6db706257.png)
+  <img width="982" alt="Simulator Screen Shot - iPhone 8 - 1" src="https://user-images.githubusercontent.com/108928613/205622086-96dfb3c5-21f9-48ff-b931-37b6db706257.png">
   
-  ## App Description Screen
+  4. App Description Screen
   
-  ![Simulator Screen Shot - iPhone 8 - 2022-12-05 at 16 24 16](https://user-images.githubusercontent.com/108928613/205622178-d533911d-5bef-4bbb-ba74-bfeaf07c00f3.png)
+  <img width="982" alt="Simulator Screen Shot - iPhone 8 - 2" src="https://user-images.githubusercontent.com/108928613/205622178-d533911d-5bef-4bbb-ba74-bfeaf07c00f3.png">
+  
+  5. Screen Recording
+
+https://user-images.githubusercontent.com/108928613/205629354-11b436d0-5f65-4926-ac55-bd14f92262e4.mov
+
+
 
 
 

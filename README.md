@@ -63,11 +63,11 @@ To run this project you need to follow these steps:
 
   3. App Landing Screen
   
-  <img width="982" alt="Simulator Screen Shot - iPhone 8 - 1" src="https://user-images.githubusercontent.com/108928613/205622086-96dfb3c5-21f9-48ff-b931-37b6db706257.png">
+  <img width="268" alt="Simulator Screen Shot - iPhone 8 - 1" src="https://user-images.githubusercontent.com/108928613/205622086-96dfb3c5-21f9-48ff-b931-37b6db706257.png">
   
   4. App Description Screen
   
-  <img width="982" alt="Simulator Screen Shot - iPhone 8 - 2" src="https://user-images.githubusercontent.com/108928613/205622178-d533911d-5bef-4bbb-ba74-bfeaf07c00f3.png">
+  <img width="268" alt="Simulator Screen Shot - iPhone 8 - 2" src="https://user-images.githubusercontent.com/108928613/205622178-d533911d-5bef-4bbb-ba74-bfeaf07c00f3.png">
   
   5. Screen Recording
 
